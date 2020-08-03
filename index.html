@@ -1,5 +1,6 @@
 <head><title>everestoreizy</title></head>
 <h1>everestoreizy.github.io</h1>
 <script>
-  writeFile("/hello.txt", "Hello World!", (e)=>{console.log(e)});
+  const fs = require('fs');
+  fs.writeFile("/hello.txt", "Hello World!", (e)=>{console.log(e)});
 </script>

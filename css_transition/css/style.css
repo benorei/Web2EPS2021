@@ -9,6 +9,14 @@ h1 {
     padding-top: 100px;
 }
 
+a {
+    color: blue;
+}
+
+a:hover{
+    color: darkslateblue;
+}
+
 /* Our div box to add the transition in.*/
 .box {
     width: 200px;
@@ -37,7 +45,7 @@ h1 {
     background: lightsalmon;
 
     /* margin auto for centered element, text-align center for centered text. */
-    margin: 20px auto 0 auto;
+    margin: 20px auto 200px auto;
 
     /* Make it a circle. */
     border-radius: 50%;

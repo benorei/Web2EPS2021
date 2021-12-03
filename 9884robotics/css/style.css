@@ -1,0 +1,167 @@
+/* MAIN CSS FILE CONTENTS: 
+ * Navigation Bar
+ * Globals
+ * Types of Elements
+ * Modifiers
+ * Animations
+*/
+
+/* Navigation bar */
+.nav {
+    background-color: black;
+    overflow: hidden;
+    height: fit-content;
+}
+
+.nav .sub {
+    float: left;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.title {
+    color: gold !important;
+}
+
+.nav a:hover {
+    border-radius: 10px;
+
+    animation: nav-item-hover-pull 0.1s linear 0s 1 forwards;
+}
+
+.nav a.active {
+    background-color: #219dbc5e;
+    color: white;
+    border-radius: 10px;
+}
+
+.large-text {
+    font-size: 30px;
+}
+
+/* Globals */
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-image: url("../images/nebula2.jpeg");
+    background-size: cover;
+    background-repeat: repeat-y;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    margin: 5px;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+img {
+    border-radius: 15px;
+    max-width: 40%;
+}
+
+/* Types of Elements */
+.hbox {
+    max-width: 60%;
+    margin: auto;
+    margin-top: 20px;
+    /* padding: 0px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.hbox :first-child {
+    margin-right: 20px;
+}
+
+.hitem {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: auto;
+}
+
+.content {
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px 20px;
+    padding-top: 15px;
+    width: fit-content;
+    border-radius: 15px;
+    max-width: 60%;
+}
+
+/* Modifiers */
+.glass {
+    background-color: rgba(255, 255, 255, 0.25);
+    /* filter: drop-shadow(4px 4px 4px rgba(255, 255, 255, 0.5)); */
+}
+
+.black {
+    background-color: black;
+}
+
+.bigtext {
+    font-size: 20px;
+}
+
+.indent {
+    text-indent: 30px;
+}
+
+.spacer {
+    height: 20px;
+}
+
+.no-spacer{
+    margin-top: 0px;
+}
+
+.slide-in {
+    animation: slide-in 0.5s linear 0s 1 forwards;
+}
+
+.slide-in-delay {
+    animation: slide-in 1s linear 0s 1 forwards;
+}
+
+.slide-in-delay-more {
+    animation: slide-in 2s linear 0s 1 forwards;
+}
+
+/* Animations */
+@keyframes nav-item-hover-pull {
+    100% {
+        transform: translateY(10px);
+        background-color: rgb(255, 217, 0);
+        background-size: cover;
+        color: #023047;
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-40px);
+        filter: blur(2px);
+    }
+    60% {
+        transform: translateX(-10px);
+        filter: blur(0px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}

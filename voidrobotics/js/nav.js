@@ -22,12 +22,12 @@ let temp = nav;
 
 //If the website is being hosted on GitHub pages or being run off my computer, show the "Directory" option. This prevents the directory option from being shown while it's hosted on the void.noallus.nl domain where that page isn't available.
 //If the website is being hosted on GitHub pages, show the link to the source code.
-if ( window.location.hostname == "everestoreizy.github.io" ||
-    window.location.hostname == "") {
-    temp += directory
-} if ( window.location.hostname == "everestoreizy.github.io") {
-    temp += source
+if ( window.location.hostname == "everestoreizy.github.io" ) {
+    temp += directory;
+    temp += source;
 }
+
+console.log(temp);
 
 document.getElementsByClassName('nav')[0].innerHTML = temp;
 

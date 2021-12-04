@@ -14,16 +14,19 @@ let nav = `
 let directory = `
 <a class="sub-r opt" href="../index.html">Directory</a>
 `
+let source = `
+<a class="sub-r opt" href="https://github.com/everestoreizy/everestoreizy.github.io/tree/master/voidrobotics">Source</a>
+`
 
-let temp = null;
+let temp = nav;
 
-//If the website is being hosted on GitHub pages or being run off my computer, show the "Directory" option.
-//This prevents the directory option from being shown while it's hosted on the void.noallus.nl domain where that page isn't available.
+//If the website is being hosted on GitHub pages or being run off my computer, show the "Directory" option. This prevents the directory option from being shown while it's hosted on the void.noallus.nl domain where that page isn't available.
+//If the website is being hosted on GitHub pages, show the link to the source code.
 if ( window.location.hostname == "everestoreizy.github.io" ||
     window.location.hostname == "") {
-    temp = nav + directory
-} else {
-    temp = nav
+    temp += directory
+} if ( window.location.hostname == "everestoreizy.github.io") {
+    temp += source
 }
 
 document.getElementsByClassName('nav')[0].innerHTML = temp;

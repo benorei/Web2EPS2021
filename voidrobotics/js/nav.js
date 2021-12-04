@@ -1,12 +1,12 @@
 let nav_elements = [
-    ["Home", "/."],
+    ["Home", "."],
     ["Products", "/products"],
     ["Contact", "/contact"]
 ]
 
 let nav = `
 <span class="sub title">Void Robotics</span>
-<a class="sub opt" href="/.">Home</a>
+<a class="sub opt" href=".">Home</a>
 <a class="sub opt" href="products">Products</a>
 <a class="sub opt" href="contact">Contact</a>
 `

@@ -1,0 +1,22 @@
+/* Device Size Modifications */
+@media screen and (max-width: 800px) {
+    .content {
+        max-width: 90%;
+    }
+    .hbox {
+        max-width: 90%;
+        flex-direction: column;
+    }
+    .hitem {
+        margin: auto;
+        margin-bottom: 20px;
+        margin-right: none;
+    }
+    .hspacer {
+        width: 0px;
+        height: 0px;
+    }
+    .image {
+        height: 500px;
+    }
+} 

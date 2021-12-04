@@ -1,3 +1,6 @@
+/* Images that need to be filled by the background-image property for resizability
+ * (I could do it another way but I don't want to.)
+ */
 .image-front-page-main-1 {
     background-image: url("https://images.pexels.com/photos/9242913/pexels-photo-9242913.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     min-width: 30px;

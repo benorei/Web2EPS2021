@@ -11,6 +11,7 @@
 /* Variables */
 :root {
     --border-radius: 15px;
+    --nav-sub-border-radius: 10px 10px 0px 0px;
 }
 
 /* Navigation bar */
@@ -23,19 +24,24 @@
 .nav .sub {
     float: left;
     color: white;
-    padding: 10px 20px;
+    padding: 5px 20px;
     text-decoration: none;
+    transform: translateY(10px);
 }
 
 .nav .sub-r {
     float: right;
     color: white;
-    padding: 10px 20px;
+    padding: 5px 20px;
     text-decoration: none;
+    transform: translateY(10px);
+    border-radius: var(--nav-sub-border-radius);
 }
 
 .title {
-    color: gold !important;
+    float: left;
+    padding: 15px 20px 5px;
+    color: gold;
 }
 
 .nav a:hover {
@@ -45,9 +51,11 @@
 }
 
 .nav a.active {
-    background-color: #219dbc5e;
+    background-color: rgba(255, 217, 0, .5);
     color: white;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: var(--nav-sub-border-radius);
+    /* padding: 5px 20px; */
+    /* transform: translateY(10px); */
 }
 
 .large-text {
@@ -89,11 +97,9 @@ a {
     max-width: 60%;
     margin: auto;
     margin-top: 20px;
-    /* padding: 0px; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* align-items: flex-start; */
     align-items: stretch;
     padding: 20px;
     border-radius: var(--border-radius);
@@ -122,7 +128,6 @@ a {
 /* Modifiers */
 .glass {
     background-color: rgba(255, 255, 255, 0.25);
-    /* filter: drop-shadow(4px 4px 4px rgba(255, 255, 255, 0.5)); */
 }
 
 .black {
@@ -164,10 +169,11 @@ a {
 /* Animations */
 @keyframes nav-item-hover-pull {
     100% {
-        transform: translateY(10px);
+        transform: translateY(0px);
         background-color: rgb(255, 217, 0);
-        background-size: cover;
         color: #023047;
+        padding: 10px 20px;
+        border-radius: var(--nav-sub-border-radius);
     }
 }
 

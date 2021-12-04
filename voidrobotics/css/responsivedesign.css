@@ -1,4 +1,4 @@
-/* Device Size Modifications */
+/* Responsive design based on screen size */
 @media screen and (max-width: 800px) {
     .content {
         max-width: 90%;
@@ -9,14 +9,35 @@
     }
     .hitem {
         margin: auto;
-        margin-bottom: 20px;
         margin-right: none;
     }
     .hspacer {
         width: 0px;
-        height: 0px;
+        height: 20px;
     }
     .image {
         height: 500px;
     }
-} 
+    
+}
+
+@media screen and (max-width: 600px){
+    .title {
+        width: 100%;
+    }
+    .nav .sub {
+        padding: 5px 20px;
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+    @keyframes nav-item-hover-pull {
+        100% {
+            transform: translateY(0px);
+            background-color: rgb(255, 217, 0);
+            color: #023047;
+            border-radius: var(--nav-sub-border-radius);
+            margin-bottom: 0px;
+            padding: 10px 20px;
+        }
+    }
+}

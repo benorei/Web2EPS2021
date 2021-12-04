@@ -1,12 +1,25 @@
 let nav = `
 <span class="sub title">Void Robotics</span>
-<a class="sub opt" href="index.html">Home</a>
-<a class="sub opt" href="products.html">Products</a>
-<a class="sub opt" href="contact.html">Contact</a>
+<a class="sub opt" href="index">Home</a>
+<a class="sub opt" href="products">Products</a>
+<a class="sub opt" href="contact">Contact</a>
+`
+
+let directory = `
 <a class="sub-r opt" href="../index.html">Directory</a>
 `
 
-document.getElementsByClassName('nav')[0].innerHTML = nav;
+let temp = null;
+
+//If the website is being hosted on GitHub pages or being run off my computer, show the "Directory" option.
+if ( window.location.hostname == "everestoreizy.github.io" ||
+    window.location.hostname == "") {
+    temp = nav + directory
+} else {
+    temp = nav
+}
+
+document.getElementsByClassName('nav')[0].innerHTML = temp;
 
 let title = document.getElementsByTagName("title")[0].innerText;
 

@@ -51,7 +51,7 @@
 }
 
 .large-text {
-    font-size: 30px;
+    font-size: 25px;
 }
 
 /* Globals */
@@ -178,7 +178,7 @@ a {
     }
     60% {
         transform: translateX(-10px);
-        filter: blur(0px);
+        filter: none;
     }
     100% {
         transform: translateX(0px);

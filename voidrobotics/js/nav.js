@@ -2,8 +2,8 @@ let nav = `
 <span class="sub title">Void Robotics</span>
 <a class="sub opt" href="index.html">Home</a>
 <a class="sub opt" href="products.html">Products</a>
-<a class="sub opt" href="hardware.html">Hardware</a>
-<a class="sub opt" href="mailto:eoreizy@eastsideprep.org">Contact</a>
+<a class="sub opt" href="contact.html">Contact</a>
+<a class="sub-r opt" href="../index.html">Directory</a>
 `
 
 document.getElementsByClassName('nav')[0].innerHTML = nav;

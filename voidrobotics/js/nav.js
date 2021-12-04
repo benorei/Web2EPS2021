@@ -1,6 +1,6 @@
 let nav = `
 <span class="sub title">Void Robotics</span>
-<a class="sub opt" href="index">Home</a>
+<a class="sub opt" href="/">Home</a>
 <a class="sub opt" href="products">Products</a>
 <a class="sub opt" href="contact">Contact</a>
 `
@@ -12,6 +12,7 @@ let directory = `
 let temp = null;
 
 //If the website is being hosted on GitHub pages or being run off my computer, show the "Directory" option.
+//This prevents the directory option from being shown while it's hosted on the void.noallus.nl domain where that page isn't available.
 if ( window.location.hostname == "everestoreizy.github.io" ||
     window.location.hostname == "") {
     temp = nav + directory

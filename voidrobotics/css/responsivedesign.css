@@ -1,4 +1,6 @@
 /* Responsive design based on screen size */
+
+/* If the screen is too small, make content fill the page width. */
 @media screen and (max-width: 800px) {
     .content {
         max-width: 90%;
@@ -21,6 +23,7 @@
     
 }
 
+/* If the screen is too small, make the navbar 2 lines. */
 @media screen and (max-width: 600px){
     .title {
         width: 100%;

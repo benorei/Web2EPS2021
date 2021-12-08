@@ -1,0 +1,79 @@
+body {
+    background: lightblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1, h2, h4 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+h4 {
+    font-size: 20px;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    width: 600px;
+    background: white;
+    border-radius: 8px;
+}
+
+hr {
+    color: lightgray;
+}
+
+pre code {
+    background: #eee;
+    border: 1px solid #999;
+    display: block;
+    padding: 20px;
+}
+
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: red;
+}
+
+a:hover {
+    color: orange;
+}
+
+a:active {
+    color: indigo;
+}
+
+a.special {
+    font-weight: 800;
+    text-decoration: none;
+    color: purple;
+}
+
+a:hover.special {
+    color: blueviolet;
+}
+
+#hover-div {
+    color: white;
+    background: darkslategray;
+    padding: 10px;
+    text-align: center;
+}
+
+#hover-div:hover {
+    background: black;
+}
+
+#div-with-children {
+    padding: 10px;
+    text-align: center;
+    background: darkslategray;
+    color: white;
+}
+
+#div-with-children p:first-child {
+    color: red;
+}

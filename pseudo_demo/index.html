@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Demo</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to .web2</h1>
+        <h4>Today, we will mess with some Pseudo Classes. </h4>
+        
+        <hr>
+
+        <h2>Let's first dive deeper into CSS.</h2>
+        <p>
+            If we think of CSS in terms of selectors, properties, and values; a typical CSS entry would look like this:
+        </p>
+        <pre>
+            <code>
+                selector {
+                    property: value;
+                }
+            </code>
+        </pre>
+        <p>To style the above, we need to add two tags together. We will call this CSS Combinators.</p>
+
+
+        <hr>
+        
+        <h2>What are Pseudo Classes?</h2>
+        <p>
+            Again, if we think of CSS in terms of selectors, properties, and values; a pseudo class is an add-on to a selector.
+        </p>
+        <pre>
+            <code>
+                selector:pseudoclass {
+                    property: value;
+                }
+            </code>
+        </pre>
+
+        <h4>We use them for links</h4>
+        <p>
+            If we want our <a href="#"> link</a> to look different, we can simply add it in our CSS as follows:
+        </p>
+
+        <pre>
+            <code>
+                a {
+                    color: red;
+                }
+            </code>
+        </pre>
+        <p>
+            But if we want each of our <a href="#">link states</a> to look different, then we will use a pseudo class like:
+        </p>
+        <ul>
+            <li><code>:visited</code></li>
+            <li><code>:hover</code></li>
+            <li><code>:active</code></li>
+        </ul>
+        <p>
+            We can still override each of these properties with classes.
+            
+            <pre>
+                <code>
+                    a.special {
+                        font-weight: 800;
+                        text-decoration: none;
+                        color: purple;
+                    }
+                    
+                    a:hover.special {
+                        color: blueviolet;
+                    }
+                </code>
+            </pre><p>Now our special links look like this: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="special">I'm special.</a></p>
+        </p>
+
+        <h4>We can use Pseudo Classes on any tag.</h4>
+        <p>
+            We can use IDs or Classes to assign pseudo-styles to anything, like:
+        </p>
+        <pre>
+            <code>
+                #hover-div {
+                    color: white;
+                    background: darkslategray;
+                    padding: 10px;
+                    text-align: center;
+                }
+                
+                #hover-div:hover {
+                    background: black;
+                }
+            </code>
+        </pre>
+        <p>
+            Now we have a hoverable <code>div</code>.
+        </p>
+        <div id="hover-div">
+            <p>This div has a hover, what do you think?</p>
+        </div>
+
+        <h4>
+            We can even call on specific selectors depending on their hierarchy.
+        </h4>
+            <p>
+                To make only the first <code>p</code> red, we can use:
+            </p>
+        <pre>
+            <code>
+                #div-with-children p:first-child {
+                    color: red;
+                }
+            </code>
+        </pre>
+        
+        <div id="div-with-children">
+            <p>Hey, how are you doing?</p>
+            <p>I'm doing good, man.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -20,6 +20,12 @@
     .image {
         height: 500px;
     }
+    .footer {
+        flex-direction: column;
+    }
+    .footer-column {
+        margin: auto;
+    }
     
 }
 

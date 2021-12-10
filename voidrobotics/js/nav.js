@@ -1,3 +1,4 @@
+// Navbar html
 let nav = `
 <span class="title">Void Robotics</span>
 <a class="sub opt" href=".">Home</a>
@@ -5,6 +6,12 @@ let nav = `
 <a class="sub opt" href="contact">Contact</a>
 `
 
+// footer html
+let footer = `
+
+`
+
+// Directory and source (to be displayed only on github)
 let directory = `
 <a class="sub-r opt" href="../index.html">Directory</a>
 `
@@ -16,10 +23,11 @@ let source = `
 //If the website is being hosted on GitHub pages, show the link to the source code.
 if ( window.location.hostname == "everestoreizy.github.io" ) {
     nav += directory;
-    nav += source;
+    // nav += source;
 }
 
 document.getElementsByClassName('nav')[0].innerHTML = nav;
+// document.getElementsByClassName('footer')[0].innerHTML = footer;
 
 let title = document.getElementsByTagName("title")[0].innerText;
 
@@ -32,3 +40,13 @@ for (let index = 0; index < nav_items.length; index++) {
     }
     
 }
+
+//Set content padding to make sure the footer doesn't cover content.
+function resize_footer () {
+if ( window.innerHeight - document.body.clientHeight < 0){
+    document.getElementsByClassName("page-content")[0].style.paddingBottom = document.getElementsByClassName("footer")[0].offsetHeight + 20 + "px";
+}
+}
+
+resize_footer();
+setInterval(resize_footer, 1000);

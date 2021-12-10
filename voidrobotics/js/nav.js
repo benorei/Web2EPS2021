@@ -8,7 +8,11 @@ let nav = `
 
 // footer html
 let footer = `
-
+        <div class="footer-column">
+            9884 Kirkland Pl<br>Seattle, WA 98404
+        </div>
+        <div class="footer-column">&copy; 2021 Void Robotics <br> Everest Oreizy</div>
+        <div class="footer-column">eoreizy@eastsideprep.org<br>(425) 553-9082 <a href="contact">More...</a></div>
 `
 
 // Directory and source (to be displayed only on github)
@@ -26,8 +30,9 @@ if ( window.location.hostname == "everestoreizy.github.io" ) {
     // nav += source;
 }
 
+//Set the nav and footer. I do it here so i don't write it out on every page
 document.getElementsByClassName('nav')[0].innerHTML = nav;
-// document.getElementsByClassName('footer')[0].innerHTML = footer;
+document.getElementsByClassName('footer')[0].innerHTML = footer;
 
 let title = document.getElementsByTagName("title")[0].innerText;
 

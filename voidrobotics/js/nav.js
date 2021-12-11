@@ -8,11 +8,11 @@ let nav = `
 
 // footer html
 let footer = `
-        <div class="footer-column">
-            9884 Kirkland Pl<br>Seattle, WA 98404
-        </div>
-        <div class="footer-column">&copy; 2021 Void Robotics <br> Everest Oreizy</div>
-        <div class="footer-column">eoreizy@eastsideprep.org<br>(425) 553-9082 <a href="contact">More...</a></div>
+    <div class="footer-column">
+        9884 Kirkland Pl<br>Seattle, WA 98404
+    </div>
+    <div class="footer-column">&copy; 2021 Void Robotics <br> Everest Oreizy</div>
+    <div class="footer-column"><a class="hidden-link" href="mailto:eoreizy@eastsideprep.org">eoreizy@eastsideprep.org</a><br>(425) 553-9082 <a href="contact">More...</a></div>
 `
 
 // Directory and source (to be displayed only on github)

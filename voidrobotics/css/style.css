@@ -97,6 +97,14 @@ a {
     color: lightskyblue;
 }
 
+a.hidden-link {
+    color: white;
+}
+
+a.hidden-link:hover {
+    color: lightskyblue;
+}
+
 input {
     margin: auto;
     text-align: center;

@@ -52,4 +52,7 @@
             padding: 10px 20px;
         }
     }
+    .image {
+        min-width: 100px;
+    }
 }

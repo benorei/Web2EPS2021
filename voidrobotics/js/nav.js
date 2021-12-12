@@ -1,3 +1,10 @@
+//variables that are nice
+let nav_object = document.getElementsByClassName("nav")[0];
+let footer_object = document.getElementsByClassName("footer")[0];
+let page_content_object = document.getElementsByClassName("page-content")[0];
+let title_object = document.getElementsByTagName("title")[0];
+let nav_items_object = document.getElementsByClassName("opt");
+
 // Navbar html
 let nav = `
 <span class="title">Void Robotics</span>
@@ -11,16 +18,16 @@ let footer = `
     <div class="footer-column">
         9884 Kirkland Pl<br>Seattle, WA 98404
     </div>
-    <div class="footer-column">&copy; 2021 Void Robotics <br> Everest Oreizy</div>
+    <div class="footer-column">
+        &copy; 2021 Void Robotics <br> <a class="sub-r opt" href="../index.html">Directory</a> | <a class="sub-r opt" href="https://github.com/everestoreizy/everestoreizy.github.io/tree/master/voidrobotics">Source</a>
+    </div>
     <div class="footer-column"><a class="hidden-link" href="mailto:eoreizy@eastsideprep.org">eoreizy@eastsideprep.org</a><br>(425) 553-9082 <a href="contact">More...</a></div>
 `
 
 // Directory and source (to be displayed only on github)
 let directory = `
-<a class="sub-r opt" href="../index.html">Directory</a>
 `
 let source = `
-<a class="sub-r opt" href="https://github.com/everestoreizy/everestoreizy.github.io/tree/master/voidrobotics">Source</a>
 `
 
 //If the website is being hosted on GitHub pages or being run off my computer, show the "Directory" option. This prevents the directory option from being shown while it's hosted on the void.noallus.nl domain where that page isn't available.
@@ -31,27 +38,34 @@ if ( window.location.hostname == "everestoreizy.github.io" ) {
 }
 
 //Set the nav and footer. I do it here so i don't write it out on every page
-document.getElementsByClassName('nav')[0].innerHTML = nav;
-document.getElementsByClassName('footer')[0].innerHTML = footer;
+nav_object.innerHTML = nav;
+footer_object.innerHTML = footer;
 
-let title = document.getElementsByTagName("title")[0].innerText;
+let title_text = title_object.innerText;
 
-let nav_items = document.getElementsByClassName("opt");
-
-for (let index = 0; index < nav_items.length; index++) {
-    let text = nav_items[index].innerText;
-    if(title.startsWith(text)){
-        nav_items[index].classList.add("active");
+for (let index = 0; index < nav_items_object.length; index++) {
+    let text = nav_items_object[index].innerText;
+    if(title_text.startsWith(text)){
+        nav_items_object[index].classList.add("active");
     }
     
 }
 
 //Set content padding to make sure the footer doesn't cover content.
 function resize_footer () {
-if ( window.innerHeight - document.body.clientHeight < 0){
-    document.getElementsByClassName("page-content")[0].style.paddingBottom = document.getElementsByClassName("footer")[0].offsetHeight + 20 + "px";
-}
+    console.log("trying to resize the footer.");
+    //Find the perfect height so the footer is at the bottom of the page: 
+    //The viewport height minus the height of the body and the footer, leaving just how tall the space should be.
+    let spacing = window.innerHeight - page_content_object.clientHeight - footer_object.clientHeight;
+
+    //If the body is too small for the viewport, some extra space needs to be added. If not, use the normal spacing.
+    if(spacing > 0){
+        footer_object.style.marginTop = spacing + "px";
+    } else {
+        footer_object.style.marginTop = "20px";
+    }
 }
 
+//Resize the footer once per second so it says when you change the window size. I don't know a better way to do this.
 resize_footer();
-setInterval(resize_footer, 1000);
+setInterval(resize_footer, 5000);

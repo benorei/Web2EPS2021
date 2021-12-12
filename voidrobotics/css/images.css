@@ -1,13 +1,20 @@
 /* Images that need to be filled by the background-image property for resizability
- * (I could do it another way but I don't want to.)
+ * I use a file like this because it's less code to make the images dynamically scale this way. I probably could do it another way but I keep all the image URLs in one place here.
  */
-.image-front-page-main-1 {
-    background-image: url("https://images.pexels.com/photos/9242913/pexels-photo-9242913.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-    min-width: 30px;
-    /* height: 100%; */
-    /* min-height: 100px; */
+
+.image {
     background-size: cover;
     background-position: center;
     border-radius: 15px;
     flex-grow: 1;
+}
+
+.image-front-page-main-1 {
+    background-image: url("https://images.pexels.com/photos/9242913/pexels-photo-9242913.jpeg");
+    min-width: 30px;
+}
+
+.image-front-page-main-2 {
+    background-image: url("../images/product_images/main-1.jpg");
+    min-width: 350px;
 }

@@ -39,6 +39,9 @@
         margin: 0px;
         margin-bottom: 10px;
     }
+    .h1 {
+        margin-top: 60px;
+    }
     @keyframes nav-item-hover-pull {
         100% {
             transform: translateY(0px);

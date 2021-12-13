@@ -6,15 +6,29 @@
     background-size: cover;
     background-position: center;
     border-radius: 15px;
-    flex-grow: 1;
+    flex-grow: 2;
+    min-width: 300px;
+    /* max-width: 1000px; */
+    min-height: 200px;
 }
 
 .image-front-page-main-1 {
     background-image: url("https://images.pexels.com/photos/9242913/pexels-photo-9242913.jpeg");
-    min-width: 30px;
 }
 
 .image-front-page-main-2 {
     background-image: url("../images/product_images/main-1.jpg");
-    min-width: 350px;
+}
+
+.image-products-main-1 {
+    background-image: url("../images/product_images/products-5.jpg");
+}
+
+.image-products-main-2 {
+    background-image: url("../images/product_images/products-1.jpg");
+}
+
+.image-products-main-3 {
+    background-image: url("../images/product_images/products-3.jpg");
+    min-width: 200px;
 }

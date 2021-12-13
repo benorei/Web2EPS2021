@@ -1,24 +1,41 @@
 /* Responsive design based on screen size */
 
 /* If the screen is too small, make content fill the page width. */
-@media screen and (max-width: 800px) {
+
+@media screen and (min-width: 950px) {
+    .hitem {
+        max-width: 100%;
+    }
+    .vitem {
+        max-width: 100%;
+    };
+}
+
+@media screen and (max-width: 950px) {
     .content {
         max-width: 90%;
     }
     .hbox {
         max-width: 90%;
+    }
+    .vbox {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .hbox {
         flex-direction: column;
+    }
+    .vbox {
+        max-width: 100%;
     }
     .hitem {
         margin: auto;
-        margin-right: none;
+        max-width: 100%;
     }
-    .hspacer {
-        width: 0px;
-        height: 20px;
-    }
-    .image {
-        height: 500px;
+    .hitem.content {
+        max-width: 100%;
     }
     .footer {
         flex-direction: column;
@@ -39,9 +56,6 @@
         margin: 0px;
         margin-bottom: 10px;
     }
-    .h1 {
-        margin-top: 60px;
-    }
     @keyframes nav-item-hover-pull {
         100% {
             transform: translateY(0px);
@@ -54,5 +68,8 @@
     }
     .image {
         min-width: 100px;
+    }
+    .spacer {
+        height: 60px;
     }
 }

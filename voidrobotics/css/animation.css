@@ -32,12 +32,14 @@
     }
 }
 
+/* Fade-in hover background color change (looks nicer) */
 @keyframes button-hover-pull {
     100% {
         background-color: gold;
     }
 }
 
+/* Make the "join newsletter" button dissapear once you click it. */
 @keyframes disappear {
     0%{
         width: 100%;
@@ -48,5 +50,7 @@
         margin: auto;
         pointer-events: none;
         background-color: gold;
+        min-width: 10px;
+        min-height: 10px;
     }
 }

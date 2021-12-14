@@ -30,8 +30,10 @@
     float: left;
     color: white;
     padding: 5px 20px;
+    margin-right: 5px;
     text-decoration: none;
     transform: translateY(10px);
+    background-color: var(--accent-color-light);
 }
 
 .nav .sub-r {

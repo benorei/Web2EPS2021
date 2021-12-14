@@ -24,19 +24,6 @@ let footer = `
     <div class="footer-column"><a class="hidden-link" href="mailto:eoreizy@eastsideprep.org">eoreizy@eastsideprep.org</a><br>(425) 553-9082 <a href="contact">More...</a></div>
 `
 
-// Directory and source (to be displayed only on github)
-let directory = `
-`
-let source = `
-`
-
-//If the website is being hosted on GitHub pages or being run off my computer, show the "Directory" option. This prevents the directory option from being shown while it's hosted on the void.noallus.nl domain where that page isn't available.
-//If the website is being hosted on GitHub pages, show the link to the source code.
-if ( window.location.hostname == "everestoreizy.github.io" ) {
-    nav += directory;
-    // nav += source;
-}
-
 //Set the nav and footer. I do it here so i don't write it out on every page
 nav_object.innerHTML = nav;
 footer_object.innerHTML = footer;

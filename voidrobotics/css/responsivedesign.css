@@ -1,7 +1,6 @@
 /* Responsive design based on screen size */
 
-/* If the screen is too small, make content fill the page width. */
-
+/* If there's enough space, h-items and v-items can take as much space as they need. */
 @media screen and (min-width: 950px) {
     .hitem {
         max-width: 100%;
@@ -11,6 +10,7 @@
     };
 }
 
+/* If the screen is too small, make content fill the page width. */
 @media screen and (max-width: 950px) {
     .content {
         max-width: 90%;
@@ -23,6 +23,7 @@
     }
 }
 
+/* If the screen is even more too small, turn the h-boxes into v-boxes. */
 @media screen and (max-width: 800px) {
     .hbox {
         flex-direction: column;

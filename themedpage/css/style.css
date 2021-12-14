@@ -1,0 +1,81 @@
+body {
+    background-image: url("https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/earth_and_limb_m1199291564l_color_2stretch_mask_0.jpg");
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: center;;
+    text-align: center;
+    padding-bottom: 30px;
+    background-color: black;
+}
+
+h1 {
+    font-family: "Readex Pro", sans-serif;
+    color: whitesmoke;
+    font-size:40px;
+}
+
+.nasa-logo {
+    max-height: 250px;
+    margin: auto;
+    display: block;
+    margin-top: 15%;
+    margin-bottom: 10%;
+    filter: drop-shadow(10px 10px 5px black);
+}
+
+p {
+    color: whitesmoke;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 30px;
+}
+
+a{
+    font-family: 'Bakbak One', sans-serif;
+    text-decoration: none;
+    color: lightskyblue;
+    font-size: 25px;
+    background-color: darkslateblue;
+    padding: 10px 30px;
+    border-radius: 30px;
+    filter: drop-shadow(10px 10px 5px black);
+}
+
+a:hover {
+    color: darkslateblue;
+    background-color: whitesmoke;
+}
+
+a.submit-button {
+    background-color: lightcoral;
+    color: black;
+    padding: 5px 30px;
+}
+
+a.submit-button:hover {
+    background-color: whitesmoke;
+    color: lightcoral;
+}
+
+input {
+    border-radius: 30px;
+    filter: drop-shadow(10px 10px 5px black);
+    width: 300px;
+    height: 25px;
+    padding: 10px 20px;
+    text-align: center;
+    font-family: "Readex Pro", sans-serif;
+    font-size: 20px;
+    border: none;
+    background-color: whitesmoke;
+    color: darkslateblue;
+}
+
+.newsletter-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}

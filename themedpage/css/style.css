@@ -99,6 +99,6 @@ input {
     background-position: center;
     width: 100vw;
     height: 100vh;
-    filter: blur(3px);
+    filter: blur(3px) grayscale(60%) hue-rotate(170deg) brightness(1.2);
     background-repeat: no-repeat;
 }

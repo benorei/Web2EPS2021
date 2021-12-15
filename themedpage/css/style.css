@@ -1,8 +1,4 @@
 body {
-    background-image: url("https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/earth_and_limb_m1199291564l_color_2stretch_mask_0.jpg");
-    /* background-size: cover; */
-    background-repeat: no-repeat;
-    background-position: center;;
     text-align: center;
     padding-bottom: 30px;
     background-color: black;
@@ -12,13 +8,14 @@ h1 {
     font-family: "Readex Pro", sans-serif;
     color: whitesmoke;
     font-size:40px;
+    filter: drop-shadow(10px 10px 5px black);
 }
 
 .nasa-logo {
     max-height: 250px;
     margin: auto;
     display: block;
-    margin-top: 15%;
+    margin-top: 5%;
     margin-bottom: 10%;
     filter: drop-shadow(10px 10px 5px black);
 }
@@ -27,6 +24,7 @@ p {
     color: whitesmoke;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 30px;
+    filter: drop-shadow(10px 10px 5px black);
 }
 
 a{
@@ -35,6 +33,7 @@ a{
     color: lightskyblue;
     font-size: 25px;
     background-color: darkslateblue;
+    background-color: rgb(28, 60, 140);
     padding: 10px 30px;
     border-radius: 30px;
     filter: drop-shadow(10px 10px 5px black);
@@ -46,8 +45,7 @@ a:hover {
 }
 
 a.submit-button {
-    background-color: lightcoral;
-    color: black;
+    background-color: rgb(232, 38, 52);
     padding: 5px 30px;
 }
 
@@ -78,4 +76,29 @@ input {
     align-items: center;
     gap: 10px;
     margin-bottom: 30px;
+}
+
+.snowfall {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    background-position: top;
+    background-size: 1000px;
+    filter: blur(4px);
+    background-image: url("../images/falling-snow.gif");
+    overflow: hidden;
+}
+
+.background  {
+    background-image: url("https://www.dpreview.com/files/p/articles/6063370181/mars-rover-elderfox-docu-tour-banner.jpeg");
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    filter: blur(3px);
+    background-repeat: no-repeat;
 }

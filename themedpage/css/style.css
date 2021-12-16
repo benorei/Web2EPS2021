@@ -2,13 +2,15 @@ body {
     text-align: center;
     padding-bottom: 30px;
     background-color: black;
+    cursor: url('../images/rocket128.png'), wait;
+
 }
 
 h1 {
     font-family: "Readex Pro", sans-serif;
     color: whitesmoke;
     font-size:40px;
-    filter: drop-shadow(10px 10px 5px black);
+    filter: drop-shadow(0px 0px 5px black);
 }
 
 .nasa-logo {
@@ -17,14 +19,15 @@ h1 {
     display: block;
     margin-top: 5%;
     margin-bottom: 10%;
-    filter: drop-shadow(10px 10px 5px black);
+    filter: drop-shadow(0px 0px 5px black);
+    cursor: url("../images/planet.png"), auto;
 }
 
 p {
     color: whitesmoke;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 30px;
-    filter: drop-shadow(10px 10px 5px black);
+    filter: drop-shadow(0px 0px 5px black);
 }
 
 a{
@@ -36,7 +39,8 @@ a{
     background-color: rgb(28, 60, 140);
     padding: 10px 30px;
     border-radius: 30px;
-    filter: drop-shadow(10px 10px 5px black);
+    filter: drop-shadow(0px 0px 5px black);
+    cursor: url("../images/satellite.png"), auto;
 }
 
 a:hover {
@@ -56,7 +60,7 @@ a.submit-button:hover {
 
 input {
     border-radius: 30px;
-    filter: drop-shadow(10px 10px 5px black);
+    filter: drop-shadow(0px 0px 10px black);
     width: 300px;
     height: 25px;
     padding: 10px 20px;
@@ -79,26 +83,37 @@ input {
 }
 
 .snowfall {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     top: 0px;
     left: 0px;
     background-position: top;
     background-size: 1000px;
-    filter: blur(4px);
+    filter: blur(4px) opacity(40%);
     background-image: url("../images/falling-snow.gif");
     overflow: hidden;
 }
 
 .background  {
     background-image: url("https://www.dpreview.com/files/p/articles/6063370181/mars-rover-elderfox-docu-tour-banner.jpeg");
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 0px;
-    background-position: center;
     width: 100vw;
     height: 100vh;
     filter: blur(3px) grayscale(60%) hue-rotate(170deg) brightness(1.2);
     background-repeat: no-repeat;
+}
+
+.cursor-enforcer {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.spacertop {
+    height: 200px;
 }

@@ -7,15 +7,13 @@
     --sidebar-bg: #f2f2f2;
 }
 
+/* general */
 body {
-    /* padding: 0px 20px 20px 20px; */
     margin: 0px;
     background-color: var(--sidebar-bg);
 }
 
 h1 {
-    /* background-color: black; */
-
     font-family: 'Righteous', sans-serif;
 
     color: var(--accent-color);
@@ -42,6 +40,7 @@ p {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* main center intro */
 .hero {
     background-image: url("https://images.unsplash.com/photo-1593371256584-ac70d0ab43d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmxhY2slMjBuaWdodHxlbnwwfHwwfHw%3D&w=1000&q=80");
     background-size: cover;
@@ -54,15 +53,14 @@ p {
 .hero p{
     padding: 0px 40px;
     text-indent: 40px;
+
+    line-height: 150%;
 }
 
 
 .hero p.hero-main{
     font-size: 20px;
     text-indent: 0px;
-    background-color: white;
-    border-radius: 2000px;
-    color: black;
     padding: 10px 15px;
     text-align: center;
     width: fit-content;
@@ -76,12 +74,13 @@ p {
     font-size: 15px;
 }
 
+/* resources section */
 .links {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: stretch;
+    align-items: flex-start;
 
     padding: 0px 20px;
 }
@@ -100,19 +99,17 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     gap: 10px;
 
 }
 
 .expansion h3 {
-    /* text-align: center; */
     padding: 0px;
     margin: 0px;
     font-size: 23px;
     color: white;
-    /* filter: drop-shadow(0px 0px 10px black); */
 }
 
 .expansion a{
@@ -128,15 +125,14 @@ p {
 .expansion a:hover {
     color: var(--accent-color);
     text-decoration: underline;
-    /* filter: drop-shadow(0px 0px 10px var(--accent-color)); */
 
 }
 
+/* make things responsive columns */
 .main {
     float: left;
     width: 80%;
 
-    /* padding: 0px 20px; */
     background-color: gray;
 }
 
@@ -147,14 +143,18 @@ p {
     padding: 0px 20px;
 
     background-color: var(--sidebar-bg);
+
+    height: 100%;
 }
 
+/* navbar that wraps if the viewbox is too small */
 .topnav {
     overflow: hidden;
     background-color: #333;
     
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -190,3 +190,42 @@ p {
     padding: 20px;
     background-color: var(--accent-color);
 }
+
+/* Make it one big column if the viewbox is smaller than tablet size. */
+@media only screen and (max-width: 1100px) {
+    .main{
+        width: 100%;
+    }
+    .right-bar{
+        width: 100%;
+    }
+    .expansion {
+        align-content: flex-start;
+    }
+}
+
+/* Make the resources section one column if the viewbox is phone sized. */
+@media only screen and (max-width: 500px) {
+    .expansion {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+/* Tried this for larger screens but didn't like how the 3-column view looked. */
+/* @media only screen and (min-width: 1500px) {
+    .links {
+        float: left;
+        width: 30%;
+        flex-direction: column;
+    }
+
+    .expansion {
+        width: 100%;
+    }
+
+    .hero {
+        float: right;
+        width: 70%;
+    }
+} */

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Gradients Demo</title>
+
+    <link rel="stylesheet" href="css/style.css" class="css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>CSS Gradients Demo</h1>
+        <p>
+            This demo will show how to make gradients in CSS. Gradients are a useful tool that can be used to add a bit
+            of spice to your color design and palette. There are many types of gradients and this guide will show how to
+            make multiple. This demo's final project is a box with a button that will have different gradients on its
+            background, its face, and its hover.
+        </p>
+        <h2>Setup</h2>
+        <p>In a new HTML page, make a button inside a div, and give it a little CSS to center it.</p>
+        <div class="cc"><code>
+            # Index.html
+            &lt;div class="button-container"&gt;
+                &lt;button&gt;Button&lt;/button&gt;
+            &lt;/div&gt;
+
+            # #Style.css
+            .button-container {
+                text-align: center;
+            }
+        </code></div>
+        <div class="demo">
+            <div class="button-container">
+                <button>Button</button>
+            </div>
+        </div>
+        <h2>Linear Gradient</h2>
+        <p>Now that we've got that set up, let's think about some gradients. First, we're going to make the background
+            div a nice linear gradient that goes diagonally.</p>
+        <p>You can choose any colors you want, but I'm going to go with a nice light to dark blue.</p>
+        <p>
+            The syntax for a linear gradient is:
+            <code>background: linear-gradient(color1, color2)</code>
+        </p>
+        <div class="cc">
+            <code>
+    #Style.css
+    .button-container {
+        background: linear-gradient(lightblue, blue);
+    }
+
+    #Let's also make the button container look a little nicer too.
+    .button-container {
+        padding: 20px;
+        border-radius: 10px;
+    }
+            </code>
+        </div>
+        <div class="demo d1 button-container">
+            <button>Button</button>
+        </div>
+        <p>
+            Okay, that did something! It looks kind of boring going from top to bottom though, so let's rotate it. We
+            can rotate it by adding <code>angle</code> in front of the colors like so:
+        </p>
+        <div class="cc">
+            <code>
+                .button-container {
+                    background: linear-gradient(45deg, lightblue, blue);
+                }
+            </code>
+        </div>
+        <div class="demo d2 button-container">
+            <button>Button</button>
+        </div>
+        <p>
+            Look at that! It's rotated 45 degrees. You can also rotate it in any direction by changing the number of
+            degrees.
+
+            To make the rotation based on the shape of the box, you can replace <code>45deg</code> with
+            <code>to (top | bottom) right | left</code>. You can also add more colors by just adding more colors!
+        </p>
+        <div class="cc">
+            <code>
+                .button-container {
+                    background: linear-gradient(to left, lightblue, blue, lightgreen, green);
+                }
+            </code>
+        </div>
+        <div class="demo d3 button-container">
+            <button>Button</button>
+        </div>
+        <p>
+            Pick whatever colors and orientation you think fit best, and let's move on. I've picked <code>green</code>,
+            <code>light blue</code>, and <code>60deg</code>.
+        </p>
+        <div class="demo d4 button-container">
+            <button>Button</button>
+        </div>
+        <h2>Radial Gradient</h2>
+        <p>Radial gradients have one color in the center that fades to another color in the outside. The syntax is quite
+            similar to the linear gradient. Let's use this to make our button face. (We'll also add a little extra base
+            CSS to give us more room to see our gradient.</p>
+        <div class="cc"><code>
+            button {
+                background: radial-gradient(red, rebeccapurple);
+            
+                padding: 20px;
+                border-radius: 10px;
+                border: none;
+                width: 300px;
+            }
+        </code></div>
+        <div class="demo d5 button-container lin">
+            <button>Button</button>
+        </div>
+        <p>
+            Well that's certianly something! With radial gradients it's especially important to pick colors that look
+            good together.
+        </p>
+        <p>I do think that ovaly shaped thing looks weird. We can change the shape of the gradient by adding the shape
+            before the colors, like so:</p>
+        <div class="cc"><code>
+            button {
+                background: radial-gradient(circle, #E58500, #002642);
+            }
+        </code></div>
+        <div class="demo d6 button-container lin pd">
+            <button>Button</button>
+        </div>
+        <p>We can also change the position of our "circle":</p>
+        <div class="cc">
+            <code>
+                button {
+                    background: radial-gradient(circle at top left, #E58500, #002642);
+
+                    color: white;
+                }
+            </code>
+        </div>
+        <div class="demo d7 button-container lin pd">
+            <button>Button</button>
+            </div>
+            <h2>Conic Gradient</h2>
+        <p>
+            People might not know it's a button though - so let's add a different gradient as the hover effect. We're going to use a conic gradient, which works similarly to the radial one.
+        </p>
+        <div class="cc">
+            <code>
+                button:hover {
+                    background: conic-gradient(lime, aqua, blue, magenta);
+                }
+            </code>
+        </div>
+        <div class="demo d8 button-container lin pd st">
+            <button>Button</button>
+        </div>
+        <p>Looks interesting. You may not like the "cutoff", but this can be fixed by putting the first color a second time at the end of the list.
+        </p>
+        <div class="cc">
+            <code>
+                button:hover {
+                    background: conic-gradient(lime, aqua, blue, magenta, lime);
+                }
+            </code>
+            </div>
+            <div class="demo d9 button-container lin pd st">
+            <button>Button</button>
+            </div>
+        <h2>Conclusion</h2>
+        <p>I'll admit that the final example I put right before this is not the best looking thing in the world. But with a few color palletes (I recommend coolors.co) and your new knowledge of CSS gradients, you will be able to make some awesome looking stuff. (And remember! These gradients can be applied to anything, not just buttons! Play around with <code>linear-, radial-, and conic-gradient()</code> and see what you can apply them to!)</p>
+        <p>
+            I hope you enjoyed this tutorial! If you have any questions, comments, or suggestions, feel free to contact me at
+            <a href="mailto:eoreizy@eastsideprep.org">my email.</a>
+        </p>
+    </div>
+</body>
+
+</html>

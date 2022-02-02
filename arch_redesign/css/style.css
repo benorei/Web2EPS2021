@@ -145,6 +145,8 @@ p {
     background-color: var(--sidebar-bg);
 
     height: 100%;
+
+    word-break: break-all;
 }
 
 /* navbar that wraps if the viewbox is too small */

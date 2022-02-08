@@ -1,3 +1,7 @@
+.hvr:hover {
+    animation: hover-raise 0.2s linear 0s 1 forwards normal;
+}
+
 @keyframes remove-blurbox {
     0% {}
 
@@ -8,7 +12,7 @@
 
 @keyframes topnav-link-hover {
     100% {
-        background-color: var(--cp5);
+        background-color: var(--cpf5);
         color: white;
 
         box-shadow: #101935 0px 0px 50px;
@@ -17,6 +21,12 @@
 
 @keyframes topnav-hover {
     100% {
-        box-shadow: rgba(0,0,0,0.5) 0px 0px 30px;
+        box-shadow: rgba(0,0,0,0.2) 0px 0px 30px;
+    }
+}
+
+@keyframes hover-raise {
+    100% {
+        box-shadow: rgba(0,0,0,0.3) 0px 0px 30px;
     }
 }

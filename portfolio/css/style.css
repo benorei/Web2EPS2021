@@ -1,9 +1,17 @@
 :root {
-    --cp1: #564787;
-    --cp2: #dbcbd8;
-    --cp3: #f2fdff;
-    --cp4: #9ad4d6;
-    --cp5: #101935;
+    --cp1: #56478780;
+    --cp2: #dbcbd880;
+    --cp3: #f2fdff80;
+    --cp4: #9ad4d680;
+    --cp5: #10193580;
+
+    --cpf1: #564787;
+    --cpf2: #dbcbd8;
+    --cpf3: #f2fdff;
+    --cpf4: #9ad4d6;
+    --cpf5: #101935;
+
+    --cpd: rgba(0, 0, 0, 0.65);
 }
 
 body {
@@ -29,13 +37,21 @@ h1 {
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-timing-function: linear;
+
+    text-align: center;
+    font-size: 40px;
+    /* margin-top: 100px; */
+    background-color: white;
 }
 
 .page {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
     align-items: center;
+
+    max-width: 80%;
+    margin: auto;
 }
 
 a {
@@ -43,9 +59,13 @@ a {
     text-align: center;
 }
 
-a:hover::before {
-    animation: remove-blurbox 0.2s linear 0s 1 normal forwards;
+a.raised {
+    padding: 10px;
+    border-radius: 10px;
+
 }
+
+
 
 .cp1 {
     background-color: var(--cp1);
@@ -68,6 +88,29 @@ a:hover::before {
     background-color: var(--cp5);
 }
 
+a.cp1 {
+    background-color: var(--cpf1);
+    color: white;
+}
+
+a.cp2 {
+    background-color: var(--cpf2);
+}
+
+a.cp3 {
+    background-color: var(--cpf3);
+}
+
+a.cp4 {
+    background-color: var(--cpf4);
+}
+
+a.cp5 {
+    background-color: var(--cpf5);
+}
+
+
+
 .topnav {
     overflow: hidden;
     display: flex;
@@ -76,14 +119,16 @@ a:hover::before {
     margin: 20px;
     border-radius: 10px;
     padding: 5px;
+
+    flex-wrap: wrap;
 }
 
-.topnav:hover {
+.topnav:hover{
     animation: topnav-hover 0.2s linear 0s 1 forwards normal;
 }
 
 .topnav a{
-    color: var(--cp5);
+    color: var(--cpf5);
     padding: 10px 30px;
 
     border-radius: 5px;
@@ -91,4 +136,50 @@ a:hover::before {
 
 .topnav a:hover {
     animation: topnav-link-hover 0.2s linear 0s 1 forwards normal;
+}
+
+.hbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    gap: 30px;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-image: url("../images/hex.jpg");
+    }
+
+    .topnav a {
+        color: white;
+    }
+
+    .topnav {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .cp1.dt {
+        background-color: var(--cpd);
+        color: var(--cp1);
+    }
+
+    .cp2.dt {
+        background-color: var(--cpd);
+        color: var(--cp2);
+    }
+
+    .cp3.dt {
+        background-color: var(--cpd);
+        color: var(--cp3);
+    }
+
+    .cp4.dt {
+        background-color: var(--cpd);
+        color: var(--cp4);
+    }
+
+    .cp5.dt {
+        background-color: var(--cpd);
+        color: var(--cp5);
+    }
 }

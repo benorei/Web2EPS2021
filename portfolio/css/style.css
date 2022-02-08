@@ -1,0 +1,94 @@
+:root {
+    --cp1: #564787;
+    --cp2: #dbcbd8;
+    --cp3: #f2fdff;
+    --cp4: #9ad4d6;
+    --cp5: #101935;
+}
+
+body {
+    /* Remove white border */
+    margin: 0px;
+
+    background-image: url("../images/geometric.png");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+
+    background-attachment: fixed;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    /* animation-name: bump-in; */
+    animation-duration: 0.1s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+}
+
+a:hover::before {
+    animation: remove-blurbox 0.2s linear 0s 1 normal forwards;
+}
+
+.cp1 {
+    background-color: var(--cp1);
+    color: white;
+}
+
+.cp2 {
+    background-color: var(--cp2);
+}
+
+.cp3 {
+    background-color: var(--cp3);
+}
+
+.cp4 {
+    background-color: var(--cp4);
+}
+
+.cp5 {
+    background-color: var(--cp5);
+}
+
+.topnav {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    gap: 2%;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.topnav:hover {
+    animation: topnav-hover 0.2s linear 0s 1 forwards normal;
+}
+
+.topnav a{
+    color: var(--cp5);
+    padding: 10px 30px;
+
+    border-radius: 5px;
+}
+
+.topnav a:hover {
+    animation: topnav-link-hover 0.2s linear 0s 1 forwards normal;
+}

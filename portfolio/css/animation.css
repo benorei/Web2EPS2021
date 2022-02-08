@@ -1,0 +1,22 @@
+@keyframes remove-blurbox {
+    0% {}
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes topnav-link-hover {
+    100% {
+        background-color: var(--cp5);
+        color: white;
+
+        box-shadow: #101935 0px 0px 50px;
+    }
+}
+
+@keyframes topnav-hover {
+    100% {
+        box-shadow: rgba(0,0,0,0.5) 0px 0px 30px;
+    }
+}

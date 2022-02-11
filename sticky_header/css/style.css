@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Main */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    color: rgb(84, 84, 84);
+
+    background-color: rgba(169, 143, 143, 0.736);
+
+    padding: 0px 20px 20px 20px;
+    margin: 0px;
+
+    /* I hated how the VW stuff looked. */
+    /* font-size: 1.2vw; */
+}
+
+/* Header */
+h1 {
+    background-color: rgb(99, 56, 56);
+    color: whitesmoke;
+    text-align: center;
+    padding: 20px;
+
+    border-radius: 20px;
+
+    /* font-size: 3vw; */
+    margin-bottom: 20px;
+}
+
+/* Left (Navigation) */
+.left {
+    float: left;
+    width: 15%;
+
+    /* background-color:rgb(84, 84, 84); */
+    color: whitesmoke;
+
+    /* padding: 20px; */
+
+    text-align: center;
+}
+
+.left a {
+    color: whitesmoke;
+    text-decoration: none;
+
+    background-color: rgb(84, 84, 84);
+
+    display: block;
+
+    padding: 10px 0px;
+
+    margin-bottom: 20px;
+
+    border-radius: 20px;
+
+    width: 100%;
+}
+
+.left span {
+    color: whitesmoke;
+
+    background-color: rgb(84, 84, 84);
+
+    display: block;
+    padding: 10px 0px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+
+    width: 100%;
+
+    font-size: 1.2em;
+
+    font-weight: 800;
+}
+
+.left a:hover {
+    color: white;
+
+    /* border-radius: 20px; */
+    outline: 3px solid white;
+}
+
+/* Center (Content) */
+.ctr {
+    float: left;
+    width: 70%;
+
+    padding: 0px 20px;
+}
+
+.ctr p {
+    text-indent: 50px;
+}
+
+.download-btn img {
+    height: 20px;
+}
+
+.download-btn img:hover {
+    filter: invert(100%);
+}
+
+/* Right (Contact) */
+.right {
+    float: left;
+    width: 15%;
+
+    background-color: beige;
+    padding: 20px;
+
+    text-align: right;
+
+    border-radius: 20px;
+
+}
+
+.right a {
+    color: darkgray;
+    text-decoration: none;
+
+    display: block;
+    padding: 10px 0px;
+
+    width: 100%;
+}
+
+.right a:hover {
+    color: purple;
+}
+
+.footer {
+    background-color: darkgray;
+    color: whitesmoke;
+
+    padding: 20px;
+    float: left;
+    margin-top: 20px;
+
+    width: 100%;
+
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* Responsiveness */
+@media only screen and (max-width: 790px) {
+    .left {
+        width: 100%;
+    }
+
+    .ctr {
+        width: 100%;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    
+}
+
+@media only screen and (min-width: 791px) and (max-width: 990px) {
+    .ctr {
+        width: 85%;
+    }
+
+    .right {
+        width: 100%;
+
+        text-align: center;
+    }
+    
+    .right a {
+        display: inline;
+        padding: 20px;
+    }
+}
+
+/* new stuff */
+ 
+header {
+    background-color: rgb(128, 69, 69);
+    height: 100px;
+    position: sticky;
+    top: -50px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.header-inner {
+    float: left;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+}
+
+.logo {
+    float: left;
+    width: 30%;
+    padding-left: 40px;
+    color: rgba(255, 255, 255, 0.214);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+nav {
+    text-align: right;
+    float: left;
+    width: 70%; 
+    padding: 22px 40px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+
+    background-color: black;
+    border-radius: 20px;
+    padding: 5px 15px;
+}

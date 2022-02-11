@@ -121,6 +121,27 @@ a.cp5 {
     padding: 5px;
 
     flex-wrap: wrap;
+
+    position: sticky !important;
+    /* width: 100%; */
+    z-index: 3 !important;
+    top: 20px;
+
+    backdrop-filter: blur(10px);
+}
+
+.topnav-backdrop {
+    content: "";
+    position: sticky !important;
+    background: inherit;
+    z-index: 2 !important;
+    top: 20px;
+    /* left: 0px; */
+    /* right: 0px; */
+    /* bottom: 0px; */
+    height: 100px;
+
+    filter: blur(5px);
 }
 
 .topnav:hover{

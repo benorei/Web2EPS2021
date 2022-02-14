@@ -1,9 +1,9 @@
 :root {
-    --cp1: #56478780;
-    --cp2: #dbcbd880;
-    --cp3: #f2fdff80;
-    --cp4: #9ad4d680;
-    --cp5: #10193580;
+    --cp1: #5647873a;
+    --cp2: #dbcbd83a;
+    --cp3: #f2fdff3a;
+    --cp4: #9ad4d63a;
+    --cp5: #1019353a;
 
     --cpf1: #564787;
     --cpf2: #dbcbd8;
@@ -17,8 +17,11 @@
 body {
     /* Remove white border */
     margin: 0px;
+    background: linear-gradient(-40deg,  rgb(228, 171, 225) 0%, rgb(122, 118, 196) 50%, rgb(10, 168, 199) 100%);
 
-    background-image: url("../images/geometric.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 
     background-size: cover;
     background-repeat: no-repeat;
@@ -159,6 +162,16 @@ a.b.cp5 {
     flex-grow: 1;
 }
 
+#hamburger {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+    border: none;
+    padding: 20px;
+}
+
 .footer {
     overflow: hidden;
     display: flex;
@@ -169,8 +182,8 @@ a.b.cp5 {
     padding: 5px;
 
     flex-wrap: wrap;
-    z-index: 3 !important;
-    top: 20px;
+    /* z-index: 3 !important; */
+    /* top: 20px; */
 
     min-height: 30px;
 
@@ -183,11 +196,11 @@ a.b.cp5 {
     overflow: hidden;
 }
 
-.footer a{
-    color: darkgray;
+.footer a {
+    color: black;
 }
 
-.footer a:hover{
+.footer a:hover {
     text-decoration: underline double;
 }
 
@@ -281,7 +294,9 @@ a.b.cp5 {
     }
 
     body {
-        background-image: url("../images/hex.jpg");
+        /* background-image: url("../images/hex.jpg"); */
+        background: linear-gradient(-40deg, rgba(2, 0, 36, 1) 0%, rgba(94, 14, 90, 1) 48%, rgba(10, 101, 120, 1) 100%);
+
     }
 
     .topnav a {
@@ -319,5 +334,57 @@ a.b.cp5 {
     .cp5.dt {
         background-color: var(--cpd);
         color: var(--cpf5);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    /* ROW -> COL */
+    .hbox {
+        flex-direction: column;
+    }
+
+    .hbox-fl div, p {
+        width: 100%;
+    }
+
+    /* SHOW HAMBURGER MENU */
+    .topnav {
+        /* display: none; */
+        flex-direction: column;
+
+        background-color: var(--cpf3);
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    .hamburg-none {
+        display: none;
+    }
+
+    /* WIDEN */
+    .page {
+        width: 95%;
+    }
+
+    .w30 {
+        width: 100%;
+    }
+
+    .w40 {
+        width: 100%;
+
+    }
+
+    .w50 {
+        width: 100%;
+
+    }
+
+    .w80 {
+        width: 100%;
+
     }
 }

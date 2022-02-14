@@ -1,7 +1,3 @@
-.hvr:hover {
-    animation: hover-raise 0.2s linear 0s 1 forwards normal;
-}
-
 @keyframes remove-blurbox {
     0% {}
 
@@ -12,21 +8,44 @@
 
 @keyframes topnav-link-hover {
     100% {
-        background-color: var(--cpf5);
-        color: white;
+        background-color: var(--cpf4);
+        /* color: white; */
 
-        box-shadow: #101935 0px 0px 50px;
+        /* box-shadow: #101935 0px 0px 50px; */
+        box-shadow: var(--cpf4) 0px 0px 50px;
+    }
+}
+
+@keyframes topnav-link-hover-dark {
+    100% {
+        background-color: var(--cpf4);
+        color: black;
+
+        box-shadow: #363639 0px 0px 50px;
     }
 }
 
 @keyframes topnav-hover {
     100% {
-        box-shadow: rgba(0,0,0,0.2) 0px 0px 30px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 30px;
+        background-color: var(--cpf3);
     }
 }
 
 @keyframes hover-raise {
     100% {
-        box-shadow: rgba(0,0,0,0.3) 0px 0px 30px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 30px;
+    }
+}
+
+@keyframes hover-raise-dark {
+    100% {
+        box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 30px;
+    }
+}
+
+@keyframes fade-to-white {
+    100% {
+        background-color: white;
     }
 }

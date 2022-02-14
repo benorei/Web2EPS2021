@@ -14,16 +14,6 @@
     height: fit-content;
 }
 
-.fg.pad30 {
-    margin: auto;
-    padding: 30px;
-}
-
-.fg.pad20 {
-    margin: auto;
-    padding: 20px;
-}
-
 .fg::before {
     content: "";
     position: absolute;
@@ -49,3 +39,8 @@ a.fg {
 .fg h2 {
     margin-top: 0px;
 }
+
+/* .fg p{
+    padding: 0px;
+    margin: 0px;
+} */

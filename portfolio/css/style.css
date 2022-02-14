@@ -86,27 +86,29 @@ a.raised {
 
 .cp5 {
     background-color: var(--cp5);
+    color: white;
 }
 
-a.cp1 {
+a.b.cp1 {
     background-color: var(--cpf1);
     color: white;
 }
 
-a.cp2 {
+a.b.cp2 {
     background-color: var(--cpf2);
 }
 
-a.cp3 {
+a.b.cp3 {
     background-color: var(--cpf3);
 }
 
-a.cp4 {
+a.b.cp4 {
     background-color: var(--cpf4);
 }
 
-a.cp5 {
+a.b.cp5 {
     background-color: var(--cpf5);
+    color: white;
 }
 
 
@@ -127,46 +129,157 @@ a.cp5 {
     z-index: 3 !important;
     top: 20px;
 
-    backdrop-filter: blur(10px);
+    background-color: var(--cp3);
 }
 
-.topnav-backdrop {
+.topnav::before {
     content: "";
-    position: sticky !important;
-    background: inherit;
-    z-index: 2 !important;
-    top: 20px;
-    /* left: 0px; */
-    /* right: 0px; */
-    /* bottom: 0px; */
-    height: 100px;
+    position: absolute;
+    /* background: inherit; */
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
 
-    filter: blur(5px);
+    background-color: red;
 }
 
-.topnav:hover{
+.topnav:hover {
     animation: topnav-hover 0.2s linear 0s 1 forwards normal;
+
 }
 
-.topnav a{
+.topnav a {
     color: var(--cpf5);
     padding: 10px 30px;
 
     border-radius: 5px;
+
+    flex-grow: 1;
 }
 
-.topnav a:hover {
-    animation: topnav-link-hover 0.2s linear 0s 1 forwards normal;
+.footer {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 2%;
+    margin: 20px;
+    padding: 5px;
+
+    flex-wrap: wrap;
+    z-index: 3 !important;
+    top: 20px;
+
+    min-height: 30px;
+
+    background-color: var(--cp3);
+}
+
+.footer-below {
+    opacity: 0;
+    height: 20px;
+    overflow: hidden;
+}
+
+.footer a{
+    color: darkgray;
+}
+
+.footer a:hover{
+    text-decoration: underline double;
 }
 
 .hbox {
     display: flex;
     flex-direction: row;
-    justify-content: stretch;
+    justify-content: center;
     gap: 30px;
 }
 
+.hbox-fl h3 {
+    margin-top: 0px;
+}
+
+.hbox-fl div, p {
+    float: left;
+    box-sizing: border-box;
+    /* margin: 10px; */
+    padding: 5px;
+}
+
+.hbox.vert-center {
+    align-items: center;
+}
+
+.hbox.vert-stretch {
+    align-items: stretch;
+}
+
+.center {
+    text-align: center;
+}
+
+.hvr-underline:hover {
+    text-decoration: underline double;
+}
+
+.w30 {
+    width: 30%;
+}
+
+.w40 {
+    width: 40%;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.w80 {
+    width: 80%;
+}
+
+.fg.pad30 {
+    /* margin: auto; */
+    padding: 30px;
+}
+
+.fg.pad20 {
+    /* margin: auto; */
+    padding: 20px;
+}
+
+.fg.pad10 {
+    /* margin: auto; */
+    padding: 10px;
+}
+
+.f12 {
+    font-size: 1.2rem;
+}
+
+.whi {
+    color: white !important;
+}
+
+@media (prefers-color-scheme: light) {
+    .topnav a:hover {
+        animation: topnav-link-hover 0.2s linear 0s 1 forwards normal;
+    }
+
+    .hvr:hover {
+        animation: hover-raise 0.2s linear 0s 1 forwards normal;
+    }
+}
+
 @media (prefers-color-scheme: dark) {
+
+    .hvr:hover {
+        animation: hover-raise-dark 0.2s linear 0s 1 forwards normal;
+    }
+
     body {
         background-image: url("../images/hex.jpg");
     }
@@ -175,32 +288,36 @@ a.cp5 {
         color: white;
     }
 
+    .topnav a:hover {
+        animation: topnav-link-hover-dark 0.2s linear 0s 1 forwards normal;
+    }
+
     .topnav {
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: var(--cpd);
     }
 
     .cp1.dt {
         background-color: var(--cpd);
-        color: var(--cp1);
+        color: var(--cpf1);
     }
 
     .cp2.dt {
         background-color: var(--cpd);
-        color: var(--cp2);
+        color: var(--cpf2);
     }
 
     .cp3.dt {
         background-color: var(--cpd);
-        color: var(--cp3);
+        color: var(--cpf3);
     }
 
     .cp4.dt {
         background-color: var(--cpd);
-        color: var(--cp4);
+        color: var(--cpf4);
     }
 
     .cp5.dt {
         background-color: var(--cpd);
-        color: var(--cp5);
+        color: var(--cpf5);
     }
 }

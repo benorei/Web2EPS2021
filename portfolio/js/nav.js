@@ -7,17 +7,27 @@ let nav_cont = `
 <a href="contact.html">Contact</a>
 `
 
+//footer icons using fontawesome.com
 let footer_cont = `
-<a href="mailto:eoreizy@eastsideprep.org">eoreizy@eastsideprep.org</a>
-<a href="tel:4255539082">(425) 553-9082</a>
-<a href="">Eastside Preparatory School: 10613 NE 38th Pl, Kirkland, WA 98033</a>
+<span>&copy; Everest Oreizy 2022</span><br>
+<a href="tel:4255539082" class="smi fg"><i class="bi bi-telephone-fill"></i></a>
+<a href="mailto:eoreizy@eastsideprep.org" class="smi fg"><i class="bi bi-envelope"></i></a>
+<a href="instagram.com/everestoreizy" class="smi fg"><i class="bi bi-instagram"></i></a>
+<a href="#no-twitter" class="smi fg"><i class="bi bi-twitter"></i></a> 
+    <a href="about.html" class="fg pad10 cp5 dt center smi-l hvr-underline whi">
+    About</a>
+    <a href="portfolio.html" class="fg pad10 cp5 dt center smi-l hvr-underline whi">Web Portfolio</a>
+    <a href="pricing.html" class="fg pad10 cp5 dt center smi-l hvr-underline whi">Pricing</a>
+    <a href="#" class="fg pad10 cp5 dt center smi-l hvr-underline whi">???</a>
+    <a href="contact.html" class="fg pad10 cp5 dt center smi-l hvr-underline whi">Contact</a>
+
 `
 
 let topnav = document.getElementsByClassName("topnav")[0];
 let footer = document.getElementsByClassName("footer")[0];
 
 let hamburger_state = false;
-topnav.classList.add("hamburg-none");
+topnav.classList.add("hamburg-show");
 
 topnav.innerHTML = nav_cont;
 footer.innerHTML = footer_cont;
@@ -27,10 +37,12 @@ let hamburger = document.getElementById("hamburger");
 
 hamburger.addEventListener("click", function() {
     if(hamburger_state) {
-        topnav.classList.add("hamburg-none");
+        topnav.classList.remove("hamburg-none");
+
         hamburger_state = false;
     } else {
-        topnav.classList.remove("hamburg-none");
+        topnav.classList.add("hamburg-none");
+
         hamburger_state = true;
     }
 });

@@ -10,6 +10,7 @@
     100% {
         background-color: var(--cpf4);
         /* color: white; */
+        color: black;
 
         /* box-shadow: #101935 0px 0px 50px; */
         box-shadow: var(--cpf4) 0px 0px 50px;
@@ -47,5 +48,15 @@
 @keyframes fade-to-white {
     100% {
         background-color: white;
+    }
+}
+
+@keyframes nav-enter {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(0px);
     }
 }

@@ -7,6 +7,7 @@
     --cp4: #9ad4d63a;
     --cp5: #1019353a;
 
+    --cpm1: #56478780;
     --cpm3: #f2fdff80;
     --cpm5: #10193580;
 
@@ -51,6 +52,8 @@ h1 {
     font-size: 40px;
     /* margin-top: 100px; */
     background-color: white;
+
+    margin: 0px;
 }
 
 .page {
@@ -66,6 +69,10 @@ h1 {
 a {
     text-decoration: none;
     text-align: center;
+}
+
+.page a:hover{
+    text-decoration: underline double;
 }
 
 a.raised {
@@ -98,7 +105,29 @@ a.raised {
     color: white;
 }
 
-a.b.cp1 {
+.cpm1 {
+    background-color: var(--cpm1);
+    color: white;
+}
+
+.cpm2 {
+    background-color: var(--cpm2);
+}
+
+.cpm3 {
+    background-color: var(--cpm3);
+}
+
+.cpm4 {
+    background-color: var(--cpm4);
+}
+
+.cpm5 {
+    background-color: var(--cpm5);
+    color: white;
+}
+
+/* a.b.cp1 {
     background-color: var(--cpf1);
     color: white;
 }
@@ -118,7 +147,7 @@ a.b.cp4 {
 a.b.cp5 {
     background-color: var(--cpf5);
     color: white;
-}
+} */
 
 
 
@@ -192,10 +221,6 @@ a.b.cp5 {
     left: 25%;
 }
 
-#hamburger:hover {
-    background-color: var(--cpf5);
-}
-
 .footer {
     overflow: hidden;
     display: flex;
@@ -212,12 +237,6 @@ a.b.cp5 {
     min-height: 60px;
 
     background-color: var(--cp3);
-}
-
-.footer-below {
-    opacity: 0;
-    height: 20px;
-    overflow: hidden;
 }
 
 .footer a {
@@ -307,6 +326,11 @@ a.b.cp5 {
     background-color: var(--cp2);
 }
 
+.smi-l {
+    background-color: var(--cpm5);
+    /* color: black !important; */
+}
+
 .smi:hover {
     background-color: var(--cpf2);
 }
@@ -384,6 +408,31 @@ a.b.cp5 {
         background-color: var(--cpd);
         color: var(--cpf5);
     }
+
+    .dt.p {
+        color: white !important;
+    }
+
+    .footer {
+        background-color: var(--cpd);
+        color: white;
+    }
+
+    .footer i {
+        color: white;
+    }
+
+    .footer a:hover i{
+        color: var(--cpf5);
+    }
+
+    .cpm1 {
+        background-color: var(--cp1);
+    }
+
+    a.cpm1:hover {
+        background-color: var(--cpf1);
+    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -431,22 +480,8 @@ a.b.cp5 {
         width: 100%;
     }
 
-    .w30 {
+    .w30, .w40, .w50, .w80 {
         width: 100%;
-    }
-
-    .w40 {
-        width: 100%;
-
-    }
-
-    .w50 {
-        width: 100% !important;
-    }
-
-    .w80 {
-        width: 100%;
-
     }
 
     .hbox, .hbox-fl {

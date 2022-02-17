@@ -28,6 +28,10 @@
     filter: blur(5px);
 }
 
+.page a.fg {
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, .2);
+}
+
 .fg.blue {
     background: var(--cp4);
 }

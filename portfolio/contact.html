@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="css/fg.css">
     <link rel="stylesheet" href="css/animation.css">
 </head>
+
 <body>
     <div class="topnav fg hvr"></div>
     <button id="hamburger" class="fg"><i class="bi bi-menu-app"></i></button>
@@ -16,22 +18,61 @@
         <h1 class="fg pad20 dt cp1">
             Contact Me
         </h1>
-        <div class="fg cp4 dt pad10">
-            Contact me using my email or phone at:
-            eoreizy@eatsideprep.org
-            (425) 553-9082s
-            (will be links to my social media accounts)
+        <div class="fg cp1 dt pad30 w80 contact">
+            <div class="contact-inner contact-name fg">
+                <h3>Name</h3>
+                <input type="text" class="fg">
+            </div>
+            <div class="contact-inner fg">
+                <h3>Email</h3>
+                <input type="email" class="fg">
+            </div>
+            <div class="contact-inner fg">
+                <h3>Phone</h3>
+                <input type="tel" class="fg">
+            </div>
+            <div class="contact-radio fg">
+                <h3>Purpose</h3>
+                <div>
+                    <input type="radio" name="contact" id="chat">
+                    <label for="chat">I wanna chat</label>
+                </div>
+                <div>
+                    <input type="radio" name="contact" id="service-request">
+                    <label for="service-request">Request a service or contract</label>
+                </div>
+                <div>
+                    <input type="radio" name="contact" id="personal">
+                    <label for="personal">I'm just interested in personal contact</label>
+                </div>
+                <div>
+                    <input type="radio" name="contact" id="employment-opportunity">
+                    <label for="employment-opportunity">Employment opportunities</label>
+                </div>
+
+            </div>
+            <div class="contact-message fg">
+                <h3>Message</h3>
+                <textarea class="fg"></textarea>
+            </div>
+            <button id="submit" class="fg contact-submit">Send</button>
         </div>
-        <div class="fg cp5 dt pad30 w80">
-            <h3>Contact Form</h3>
-            Name <input type="text"><br>
-            Contact Info <input type="email"><br>
-            Message <input type="text"><br>
-            <button id="submit" class="fg cp3 pad10">Submit</button>
+        <div class="fg cp2 dt pad30">
+            <h2>Other contact methods</h2>
+            <p>If you prefer to contact me on your own, you can find me on multiple platforms.</p>
+            <div class="contact-others">
+                <a class="fg inh btna hvr" href="mailto:eoreizy@eastsideprep.org">eoreizy@eastsideprep.org</a>
+                <a href="#" class="fg inh btna hvr">(XXX)-XXX-XXXX</a>
+                <a href="#" class="fg inh btna hvr">@xxxxx on Instagram</a>
+                <a href="#" class="fg inh btna hvr">@xxxxx on Twitter</a>
+                <a href="#" class="fg inh btna hvr">Find me on Polywork</a>
+            </div>
+
         </div>
     </div>
 
     <div class="footer fg"></div>
 </body>
 <script src="js/nav.js"></script>
+
 </html>

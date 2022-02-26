@@ -8,7 +8,9 @@
     --cp5: #1019353a;
 
     --cpm1: #56478780;
+    --cpm2: #dbcbd880;
     --cpm3: #f2fdff80;
+    --cpm4: #9ad4d680;
     --cpm5: #10193580;
 
 
@@ -149,7 +151,9 @@ a.b.cp5 {
     color: white;
 } */
 
-
+a.cpm1:hover{
+    background-color: var(--cpf1);
+}
 
 .topnav {
     overflow: hidden;
@@ -168,8 +172,6 @@ a.b.cp5 {
     top: 20px;
 
     background-color: var(--cp3);
-
-    animation: nav-enter 0s linear 0s 1 forwards normal;
 }
 
 .topnav::before {
@@ -327,17 +329,24 @@ a.b.cp5 {
 }
 
 .smi-l {
-    background-color: var(--cpm5);
+    background-color: var(--cp5);
     /* color: black !important; */
 }
 
 .smi:hover {
-    background-color: var(--cpf2);
+    /* background-color: var(--cpf2); */
+    animation: smi-raise 0.2s linear 0s 1 forwards normal;
+
 }
 
 .smi-l:hover {
-    background-color: var(--cpf1);
+    /* background-color: var(--cpf5); */
+    animation: smi-l-raise 0.2s linear 0s 1 forwards normal;
 }
+/* 
+.smi:hover, .smi-l:hover {
+    animation: hover-raise 0.2s linear 0s 1 forwards normal;
+} */
 
 .footer span {
     height: fit-content;
@@ -348,6 +357,149 @@ a.b.cp5 {
 
 .bi-menu-app {
     color: white;
+}
+
+button.fg {
+    border: none;
+    /* width: 100%; */
+    background-color: var(--cp2);
+    padding: 10px 0px;
+    font-size: 20px;
+}
+
+button.fg:hover {
+    animation: btn-raise 0.2s linear 0s 1 forwards normal;
+}
+
+a.inh {
+    color: black;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.contact div {
+    padding: 20px;
+}
+
+.contact h3 {
+    /* padding-left: 20px; */
+}
+
+.contact-inner {
+    width: calc(50% - 50px); /* 40px is the total padding plus 10px for the gap */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+.contact-inner input{
+    flex-grow: 1;
+    border: none;
+    min-height: 40px;
+    font-size: 1.2em;
+
+    background-color: var(--cp3);
+
+    padding: 0px 10px;
+}
+
+.contact-inner.contact-name {
+    width: 100% !important;
+}
+
+.contact h3 {
+    margin-top: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.contact-radio {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    row-gap: 5px;
+    column-gap: 5px;
+
+}
+
+.contact-radio h3 {
+    width: 100%;
+}
+
+.contact-radio div {
+    /* width: 50%; */
+    min-width: 34%;
+}
+
+.contact-radio div:hover {
+    background-color: var(--cp1);
+    border-radius: 10px;
+}
+
+.contact-radio input {
+    scale: 1.3;
+}
+
+.contact-radio .contact-radio-blurb {
+    font-size: 1.1em;
+}
+
+.contact-message {
+    width: 100%;
+}
+
+.contact-message textarea {
+    width: calc(100% - 20px);
+    /* width: 100%; */
+
+    /* margin: 10px; */
+
+    margin-top: 10px;
+
+    min-height: 200px;
+
+    border: none;
+    background: inherit;
+    background-color: var(--cp3);
+
+    resize: vertical;
+
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.contact-submit {
+    width: 100%;
+}
+
+.contact-others {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    width: 100%;
+    justify-content: flex-start;
 }
 
 @media (prefers-color-scheme: light) {
@@ -435,7 +587,7 @@ a.b.cp5 {
     }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 925px) {
 
     /* ROW -> COL */
     .hbox {
@@ -461,6 +613,9 @@ a.b.cp5 {
         background-color: var(--cpm5);
 
         position: fixed !important;
+
+    animation: nav-enter 0.2s ease-out 0s 1 forwards normal;
+
     }
 
     .topnav a{
@@ -486,5 +641,9 @@ a.b.cp5 {
 
     .hbox, .hbox-fl {
         width: 100%;
+    }
+
+    h1 {
+        margin-top: 20px;
     }
 }

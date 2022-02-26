@@ -3,23 +3,23 @@ let nav_cont = `
 <a href="about.html">About</a>
 <a href="portfolio.html">Web Portfolio</a>
 <a href="pricing.html">Pricing</a>
-<a href="#">?????</a>
+<a href="#">Java Portfolio</a>
 <a href="contact.html">Contact</a>
 `
 
 //footer icons using fontawesome.com
 let footer_cont = `
-<span>&copy; Everest Oreizy 2022 // This website is Windows & Apple dark mode compatible</span><br>
-<a href="tel:4255539082" class="smi fg"><i class="bi bi-telephone-fill"></i></a>
+<span>&copy; Everest Oreizy 2022 // This is not an official website and is meant for educational purposes only.</span><br>
+<a href="#tel" class="smi fg"><i class="bi bi-telephone-fill"></i></a>
 <a href="mailto:eoreizy@eastsideprep.org" class="smi fg"><i class="bi bi-envelope"></i></a>
-<a href="instagram.com/everestoreizy" class="smi fg"><i class="bi bi-instagram"></i></a>
+<a href="#no-instagram" class="smi fg"><i class="bi bi-instagram"></i></a>
 <a href="#no-twitter" class="smi fg"><i class="bi bi-twitter"></i></a> 
-    <a href="about.html" class="fg pad10 dt center smi-l hvr-underline whi">
+    <a href="about.html" class="fg btna pad10 dt center smi-l hvr-underline whi">
     About</a>
-    <a href="portfolio.html" class="fg pad10 dt center smi-l hvr-underline whi">Web Portfolio</a>
-    <a href="pricing.html" class="fg pad10 dt center smi-l hvr-underline whi">Pricing</a>
-    <a href="#" class="fg pad10 dt center smi-l hvr-underline whi">???</a>
-    <a href="contact.html" class="fg pad10 dt center smi-l hvr-underline whi">Contact</a>
+    <a href="portfolio.html" class="fg btna pad10 dt center smi-l hvr-underline whi">Web Portfolio</a>
+    <a href="pricing.html" class="fg btna pad10 dt center smi-l hvr-underline whi">Pricing</a>
+    <a href="#" class="fg btna pad10 dt center smi-l hvr-underline whi">Java Portfolio</a>
+    <a href="contact.html" class="fg btna pad10 dt center smi-l hvr-underline whi">Contact</a>
 
 `
 

@@ -1,38 +1,29 @@
-@keyframes remove-blurbox {
-    0% {}
-
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes topnav-link-hover {
+/* @keyframes topnav-link-hover {
     100% {
         background-color: var(--cpf1);
         color: white;
 
-        /* box-shadow: #101935 0px 0px 50px; */
         box-shadow: var(--cpf4) 0px 0px 50px;
     }
-}
+} */
 
-@keyframes topnav-link-hover-dark {
+/* @keyframes topnav-link-hover-dark {
     100% {
         background-color: var(--cpf4);
         color: black;
 
         box-shadow: #363639 0px 0px 50px;
     }
-}
+} */
 
-@keyframes topnav-hover {
+/* @keyframes topnav-hover {
     100% {
         box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 30px;
         background-color: var(--cpf3);
     }
-}
+} */
 
-@keyframes hover-raise {
+/* @keyframes hover-raise {
     100% {
         box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 30px;
     }
@@ -42,52 +33,45 @@
     100% {
         box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 30px;
     }
-}
+} */
 
-@keyframes btn-raise {
+/* @keyframes btn-raise {
     100% {
         box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 50px;
         background-color: var(--cpm2);
     }
-}
+} */
 
-@keyframes btn-raise-dark {
+/* @keyframes btn-raise-dark {
     100% {
         box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 50px;
     }
-}
+} */
 
-@keyframes smi-raise {
+/* @keyframes smi-raise {
     100% {
         box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 50px;
         background-color: var(--cpf2);
-        /* background-color: red; */
-        /* scale: 2; */
     }
-}
+} */
 
-@keyframes smi-l-raise {
+/* @keyframes smi-l-raise {
     100% {
         box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 50px;
         background-color: var(--cpf5);
-        /* scale: 2; */
     }
-}
+} */
 
-@keyframes fade-to-white {
+/* @keyframes fade-to-white {
     100% {
         background-color: white;
     }
-}
+} */
 
 @keyframes nav-enter {
     0% {
         transform: translate(0px, -100px);
     }
-/* 
-    50% {
-        transform: translate(0px, -20px);
-    } */
 
     100% {
         transform: translate(0px, 0px);

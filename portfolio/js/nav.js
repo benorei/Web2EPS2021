@@ -27,7 +27,7 @@ let topnav = document.getElementsByClassName("topnav")[0];
 let footer = document.getElementsByClassName("footer")[0];
 
 let hamburger_state = false;
-topnav.classList.add("hamburg-show");
+// topnav.classList.add("hamburg-show");
 footer.classList.add("dt");
 
 
@@ -40,11 +40,11 @@ hamburger.classList.add("hvr")
 
 hamburger.addEventListener("click", function() {
     if(hamburger_state) {
-        topnav.classList.remove("hamburg-none");
+        topnav.classList.remove("hamburg-show");
 
         hamburger_state = false;
     } else {
-        topnav.classList.add("hamburg-none");
+        topnav.classList.add("hamburg-show");
 
         hamburger_state = true;
     }

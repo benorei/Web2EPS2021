@@ -26,7 +26,7 @@
 body {
     /* Remove white border */
     margin: 0px;
-    background: linear-gradient(-40deg,  rgb(228, 171, 225) 0%, rgb(122, 118, 196) 50%, rgb(10, 168, 199) 100%);
+    background: linear-gradient(-40deg, rgb(228, 171, 225) 0%, rgb(122, 118, 196) 50%, rgb(10, 168, 199) 100%);
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -73,7 +73,7 @@ a {
     text-align: center;
 }
 
-.page a:hover{
+.page a:hover {
     text-decoration: underline double;
 }
 
@@ -151,7 +151,11 @@ a.b.cp5 {
     color: white;
 } */
 
-a.cpm1:hover{
+a.cpm1 {
+    transition: background-color 0.3s;
+}
+
+a.cpm1:hover {
     background-color: var(--cpf1);
 }
 
@@ -172,6 +176,8 @@ a.cpm1:hover{
     top: 20px;
 
     background-color: var(--cp3);
+
+    transition: box-shadow 0.2s;
 }
 
 .topnav::before {
@@ -188,8 +194,9 @@ a.cpm1:hover{
 }
 
 .topnav:hover {
-    animation: topnav-hover 0.2s linear 0s 1 forwards normal;
-
+    /* animation: topnav-hover 0.2s linear 0s 1 forwards normal; */
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 30px !important;
+    /* background-color: var(--cpf3); */
 }
 
 .topnav a {
@@ -217,7 +224,7 @@ a.cpm1:hover{
     background-color: var(--cpm5);
 }
 
-#hamburger i{
+#hamburger i {
     position: absolute;
     top: 25%;
     left: 25%;
@@ -326,23 +333,30 @@ a.cpm1:hover{
     padding: 5px;
     width: 20px;
     background-color: var(--cp2);
+    transition: box-shadow 0.3s, background-color 0.3s;
 }
 
 .smi-l {
     background-color: var(--cp5);
     /* color: black !important; */
+    transition: box-shadow 0.3s, background-color 0.3s;
 }
 
 .smi:hover {
     /* background-color: var(--cpf2); */
-    animation: smi-raise 0.2s linear 0s 1 forwards normal;
+    /* animation: smi-raise 0.2s linear 0s 1 forwards normal; */
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 50px;
+    background-color: var(--cpf2);
 
 }
 
 .smi-l:hover {
     /* background-color: var(--cpf5); */
-    animation: smi-l-raise 0.2s linear 0s 1 forwards normal;
+    /* animation: smi-l-raise 0.2s linear 0s 1 forwards normal; */
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px;
+    background-color: var(--cpf5);
 }
+
 /* 
 .smi:hover, .smi-l:hover {
     animation: hover-raise 0.2s linear 0s 1 forwards normal;
@@ -365,10 +379,14 @@ button.fg {
     background-color: var(--cp2);
     padding: 10px 0px;
     font-size: 20px;
+
+    transition: box-shadow 0.2s, background-color 0.2s;
 }
 
 button.fg:hover {
-    animation: btn-raise 0.2s linear 0s 1 forwards normal;
+    /* animation: btn-raise 0.2s linear 0s 1 forwards normal; */
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 50px;
+    background-color: var(--cpm2);
 }
 
 a.inh {
@@ -383,6 +401,8 @@ a.inh {
     justify-content: center;
 
     gap: 20px;
+
+    max-width: 1000px;
 }
 
 .contact div {
@@ -394,7 +414,8 @@ a.inh {
 }
 
 .contact-inner {
-    width: calc(50% - 50px); /* 40px is the total padding plus 10px for the gap */
+    width: calc(50% - 50px);
+    /* 40px is the total padding plus 10px for the gap */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -404,7 +425,7 @@ a.inh {
     align-items: center;
 }
 
-.contact-inner input{
+.contact-inner input {
     flex-grow: 1;
     border: none;
     min-height: 40px;
@@ -504,18 +525,33 @@ a.inh {
 
 @media (prefers-color-scheme: light) {
     .topnav a:hover {
-        animation: topnav-link-hover 0.2s linear 0s 1 forwards normal;
+        /* animation: topnav-link-hover 0.2s linear 0s 1 forwards normal; */
+        background-color: var(--cpf1);
+        color: white;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, .25);
+
+        transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
+    }
+
+    .hvr {
+        transition: box-shadow 0.2s;
     }
 
     .hvr:hover {
-        animation: hover-raise 0.2s linear 0s 1 forwards normal;
+        /* animation: hover-raise 0.2s linear 0s 1 forwards normal; */
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 30px;
     }
 }
 
 @media (prefers-color-scheme: dark) {
 
+    .hvr {
+        transition: box-shadow 0.2s;
+    }
+
     .hvr:hover {
-        animation: hover-raise-dark 0.2s linear 0s 1 forwards normal;
+        /* animation: hover-raise-dark 0.2s linear 0s 1 forwards normal; */
+        box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 30px;
     }
 
     body {
@@ -529,7 +565,12 @@ a.inh {
     }
 
     .topnav a:hover {
-        animation: topnav-link-hover-dark 0.2s linear 0s 1 forwards normal;
+        /* animation: topnav-link-hover-dark 0.2s linear 0s 1 forwards normal; */
+        background-color: var(--cpf4);
+        color: black;
+        /* box-shadow: #363639 0px 0px 50px; */
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, .25);
+        transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
     }
 
     .topnav {
@@ -574,12 +615,13 @@ a.inh {
         color: white;
     }
 
-    .footer a:hover i{
+    .footer a:hover i {
         color: var(--cpf5);
     }
 
     .cpm1 {
         background-color: var(--cp1);
+        transition: background-color 0.2s;
     }
 
     a.cpm1:hover {
@@ -614,11 +656,15 @@ a.inh {
 
         position: fixed !important;
 
-    animation: nav-enter 0.2s ease-out 0s 1 forwards normal;
+        /* animation: nav-enter 0.2s ease-out 0s 1 forwards normal; */
+
+        transition: transform 0.3s;
+
+        transform: translate(0px, calc(-100% - 30px));
 
     }
 
-    .topnav a{
+    .topnav a {
         color: white !important;
     }
 
@@ -626,8 +672,8 @@ a.inh {
         display: block;
     }
 
-    .hamburg-none {
-        display: none;
+    .hamburg-show {
+        transform: translate(0px, 0px);
     }
 
     /* WIDEN */
@@ -645,5 +691,9 @@ a.inh {
 
     h1 {
         margin-top: 20px;
+    }
+
+    .contact-inner {
+        width: 100%;
     }
 }

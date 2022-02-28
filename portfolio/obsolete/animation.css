@@ -68,7 +68,7 @@
     }
 } */
 
-@keyframes nav-enter {
+/* @keyframes nav-enter {
     0% {
         transform: translate(0px, -100px);
     }
@@ -76,4 +76,4 @@
     100% {
         transform: translate(0px, 0px);
     }
-}
+} */

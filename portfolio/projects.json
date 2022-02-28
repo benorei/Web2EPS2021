@@ -1,0 +1,109 @@
+{
+    "web": [
+        {
+            "name": "Arch Linux Redesign",
+            "type": "redesign",
+            "url": "../arch_redesign/index.html",
+            "description": "Lorem ipsum dolor sit amet",
+            "image-url": "",
+            "year": 2022
+        },
+        {
+            "name": "My Pet's Vet Clinic Website",
+            "type": "redesign",
+            "url": "https://eastsidepreparatoryschool.github.io/web2-group3/index.html",
+            "description": "Lorem ipsum dolor sit amet",
+            "image-url": "",
+            "year": 2021
+        },
+        {
+            "name": "CSS Transitions",
+            "type": "bite",
+            "url": "../css_transitions/index.html",
+            "description": "Lorem ipsum dolor sit amet",
+            "image-url": "",
+            "year": 2021
+
+        },
+        {
+            "name": "Frosted Glass",
+            "type": "bite",
+            "url": "../frostedglass_demo/index.html",
+            "description": "Lorem ipsum dolor sit amet",
+            "image-url": "",
+            "year": 2022
+        },
+        {
+            "name": "Void Robotics '21",
+            "type": "custom",
+            "url": "../voidrobotics/index.html",
+            "description": "Lorem ipsum dolor sit amet",
+            "image-url": "",
+            "year": 2021
+        },
+        {
+            "name": "KrugerSolutions.biz",
+            "type": "custom",
+            "url": "https://krugersolutions.biz",
+            "description": "Lorem ipsum dolor sit amet",
+            "image-url": "",
+            "year": 2021
+        },
+        {
+            "name": "Gradients Demo",
+            "type": "demo",
+            "url": "../gradients_demo/index.html",
+            "description": "Lorem ipsum dolor sit amet",
+            "image-url": "",
+            "year": 2022
+        },
+        {
+            "name": "NASA Landing Page",
+            "type": "redesign",
+            "url": "../themedpage/index.html",
+            "description": "Lorem ipsum dolor sit amet",
+            "image-url": "",
+            "year": 2021
+        },
+        {
+            "name": "Global Nav Demo",
+            "type": "demo",
+            "url": "../nav_include_demo/index.html",
+            "description": "Lorem ipsum dolor sit amet",
+            "image-url": "",
+            "year": 2021
+        },
+        {
+            "name": "Responsive Design",
+            "type": "examplesite",
+            "url": "../responsive_css/index.html",
+            "description": "Lorem ipsum dolor sit amet",
+            "image-url": "",
+            "year": 2021
+        },
+        {
+            "name": "Sticky Header",
+            "type": "testsite",
+            "url": "../sticky_header/index.html",
+            "description": "Lorem ipsum dolor sit amet",
+            "image-url": "",
+            "year": 2022
+        },
+        {
+            "name": "Odyssey Soundtrack Player",
+            "type": "custom",
+            "url": "#FINDURL",
+            "description": "Lorem ipsum dolor sit amet",
+            "image-url": "",
+            "year": 2017
+        },
+        {
+            "name": "ROLLLINK",
+            "type": "custom",
+            "url": "https://rolllink.noallus.nl",
+            "description": "Lorem ipsum dolor sit amet",
+            "image-url": "",
+            "year": 2020
+        }
+    ]
+}

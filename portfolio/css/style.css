@@ -306,6 +306,10 @@ a.cpm1:hover {
     width: 80%;
 }
 
+.w100 {
+    width: 100%;
+}
+
 .fg.pad30 {
     /* margin: auto; */
     padding: 30px;
@@ -523,6 +527,19 @@ a.inh {
     justify-content: flex-start;
 }
 
+.portfolio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+.portfolio div {
+    min-width: 300px;
+    max-width: 500px;
+}
+
 @media (prefers-color-scheme: light) {
     .topnav a:hover {
         /* animation: topnav-link-hover 0.2s linear 0s 1 forwards normal; */
@@ -660,7 +677,7 @@ a.inh {
 
         transition: transform 0.3s;
 
-        transform: translate(0px, calc(-100% - 30px));
+        transform: translate(0px, calc(-200%));
 
     }
 

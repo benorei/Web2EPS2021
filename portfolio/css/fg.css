@@ -12,6 +12,14 @@
 
     border-radius: 10px;
     height: fit-content;
+
+    /* onload animation */
+    animation-name: fg-onload;
+    animation-duration: 0.6s;
+
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
 }
 
 .fg::before {
@@ -44,7 +52,29 @@ a.fg {
     margin-top: 0px;
 }
 
-/* .fg p{
-    padding: 0px;
-    margin: 0px;
-} */
+@keyframes fg-onload {
+    0% {
+        opacity: 0;
+        scale: 1.2;
+        box-shadow: 0 0 50px 0 rgba(0, 0, 0, 1);
+        filter: blur(2px);
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes fg-onexit {
+    0% {
+        opacity: 1;
+        scale: 1;
+    }
+    100% {
+        opacity: 0;
+        scale: 0.8;
+        box-shadow: 0 0 50px 0 rgba(0, 0, 0, 1);
+        filter: blur(2px);
+    }
+}

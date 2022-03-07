@@ -1,4 +1,5 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 :root {
     --cp1: #5647873a;
@@ -21,6 +22,10 @@
     --cpf5: #101935;
 
     --cpd: rgba(0, 0, 0, 0.65);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Righteous';
 }
 
 body {
@@ -64,7 +69,8 @@ h1 {
     gap: 20px;
     align-items: center;
 
-    max-width: 80%;
+    /* max-width: 80%; */
+    max-width: calc(100% - 40px);
     margin: auto;
 }
 
@@ -170,14 +176,16 @@ a.cpm1:hover {
 
     flex-wrap: wrap;
 
-    position: sticky !important;
+    /* position: sticky !important; */
     /* width: 100%; */
-    z-index: 3 !important;
-    top: 20px;
+    /* z-index: 3 !important; */
+    /* top: 20px; */
 
     background-color: var(--cp3);
 
-    transition: box-shadow 0.2s;
+    transition-property: scale box-shadow background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
 }
 
 .topnav::before {
@@ -196,7 +204,8 @@ a.cpm1:hover {
 .topnav:hover {
     /* animation: topnav-hover 0.2s linear 0s 1 forwards normal; */
     box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 30px !important;
-    /* background-color: var(--cpf3); */
+    /* scale: 1.05; */
+    background-color: var(--cpm3);
 }
 
 .topnav a {
@@ -206,6 +215,13 @@ a.cpm1:hover {
     border-radius: 5px;
 
     flex-grow: 1;
+
+    transition: box-shadow 0.3s, background-color 0.3s, color 0.3s, scale 0.3s;
+
+}
+
+.topnav a:hover {
+    /* scale: 1.1 !important; */
 }
 
 #hamburger {
@@ -235,9 +251,9 @@ a.cpm1:hover {
     display: flex;
     justify-content: center;
     align-content: center;
-    gap: 5px;
+    gap: 10px;
     margin: 20px;
-    padding: 5px;
+    padding: 30px;
 
     flex-wrap: wrap;
     /* z-index: 3 !important; */
@@ -284,6 +300,15 @@ a.cpm1:hover {
 
 .center {
     text-align: center;
+}
+
+.hvr {
+    transition: box-shadow 0.2s, scale 0.2s, transform 0.2s;
+    /* z-index: 2; */
+}
+
+.hvr:hover {
+    transform: scale(1.1);
 }
 
 .hvr-underline:hover {
@@ -337,13 +362,13 @@ a.cpm1:hover {
     padding: 5px;
     width: 20px;
     background-color: var(--cp2);
-    transition: box-shadow 0.3s, background-color 0.3s;
+    transition: box-shadow 0.3s, background-color 0.3s, scale 0.3s;
 }
 
 .smi-l {
     background-color: var(--cp5);
     /* color: black !important; */
-    transition: box-shadow 0.3s, background-color 0.3s;
+    transition: box-shadow 0.3s, background-color 0.3s, scale 0.3s;
 }
 
 .smi:hover {
@@ -351,7 +376,7 @@ a.cpm1:hover {
     /* animation: smi-raise 0.2s linear 0s 1 forwards normal; */
     box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 50px;
     background-color: var(--cpf2);
-
+    scale: 1.1;
 }
 
 .smi-l:hover {
@@ -359,6 +384,7 @@ a.cpm1:hover {
     /* animation: smi-l-raise 0.2s linear 0s 1 forwards normal; */
     box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px;
     background-color: var(--cpf5);
+    scale: 1.1;
 }
 
 /* 
@@ -533,12 +559,167 @@ a.inh {
     flex-wrap: wrap;
 
     gap: 20px;
+
+    justify-content: center;
 }
 
-.portfolio div {
-    min-width: 300px;
-    max-width: 500px;
+.portfolio .portfolio-item {
+    width: 300px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    align-items: flex-start;
+
+    padding: 10px;
+
+    border-bottom: 1px solid var(--cpf5);
+
+    transition-property: border scale background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+
 }
+
+.portfolio .portfolio-item:hover {
+    scale: 1.05;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .25);
+    background-color: var(--cpm3);
+
+    border-bottom-width: 5px;
+}
+
+.portfolio h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+    text-indent: 4px;
+}
+
+.portfolio .portfolio-description {
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    color: rgb(69, 69, 69);
+
+    gap: 5px;
+}
+
+.portfolio .portfolio-description .portfolio-type-yr {
+    text-align: right;
+}
+
+.portfolio .portfolio-year {
+    margin: 0px;
+}
+
+.portfolio .portfolio-item a {
+    width: 20px;
+    height: 20px;
+}
+
+.portfolio .portfolio-content {
+    width: 100%;
+}
+
+.portfolio .portfolio-image {
+    width: 100%;
+    object-fit: cover;
+    object-position: 0% 0%;
+    max-height: 200px;
+    border-radius: 5px;
+}
+
+#portfolio-popout {
+    /* display: none; */
+    /* width: 0px;
+    height: 0px; */
+    /* top: 50%;
+    left: 50%; */
+    top: 40px;
+    left: 40px;
+    width: calc(100vw - 80px);
+    height: calc(100vh - 80px);
+    
+    border-radius: 10px;
+    border: none;
+    position: fixed;
+    /* box-shadow: 0 0 30px 0 rgba(0, 0, 0, .35); */
+
+    z-index: 4;
+    background-color: white;
+
+    /* animation w/transition not keyframes */
+    opacity: 0;
+    scale: 0.8;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 1);
+    filter: blur(2px);
+    transition-property: opacity, scale, box-shadow, filter;
+    transition-duration: 0.6s;
+    transition-timing-function: ease-in-out;
+}
+
+#portfolio-popout.displayed {
+    /* display: block; */
+    
+
+    z-index: 4;
+
+    /* onload animation */
+    /* animation-name: fg-onexit;
+    animation-duration: 0.6s;
+
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+    animation-timing-function: ease-in-out; */
+
+    /* do the animation with transitions instead of keyframes */
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, .35);
+    opacity: 1;
+    scale: 1;
+    filter: none;
+
+}
+
+#portfolio-pop-close {
+    display: none;
+
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 7;
+
+    background-color: var(--cpm5);
+
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+
+    transition-property: scale background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+#portfolio-pop-close:hover {
+    scale: 1.1;
+    background-color: var(--cpf5);
+}
+
+#portfolio-pop-close .bi-x {
+    margin: auto;
+    color: white;
+    font-size: 30px;
+}
+
+#portfolio-pop-close.displayed {
+    display: block;
+}
+
+
 
 @media (prefers-color-scheme: light) {
     .topnav a:hover {
@@ -547,28 +728,24 @@ a.inh {
         color: white;
         box-shadow: 0 0 20px 0 rgba(0, 0, 0, .25);
 
-        transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
-    }
-
-    .hvr {
-        transition: box-shadow 0.2s;
+        /* transition: box-shadow 0.3s, background-color 0.3s, color 0.3s; */
     }
 
     .hvr:hover {
         /* animation: hover-raise 0.2s linear 0s 1 forwards normal; */
         box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 30px;
+        scale: 1.1 !important;
+
     }
 }
 
 @media (prefers-color-scheme: dark) {
 
-    .hvr {
-        transition: box-shadow 0.2s;
-    }
-
     .hvr:hover {
         /* animation: hover-raise-dark 0.2s linear 0s 1 forwards normal; */
         box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 30px;
+        scale: 1.1 !important;
+
     }
 
     body {
@@ -585,9 +762,9 @@ a.inh {
         /* animation: topnav-link-hover-dark 0.2s linear 0s 1 forwards normal; */
         background-color: var(--cpf4);
         color: black;
-        /* box-shadow: #363639 0px 0px 50px; */
-        box-shadow: 0 0 20px 0 rgba(0, 0, 0, .25);
-        transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
+        box-shadow: #363639 0px 0px 50px;
+        /* box-shadow: 0 0 20px 0 rgba(0, 0, 0, .25);
+        transition: box-shadow 0.3s, background-color 0.3s, color 0.3s; */
     }
 
     .topnav {
@@ -706,9 +883,9 @@ a.inh {
         width: 100%;
     }
 
-    h1 {
+    /* h1 {
         margin-top: 20px;
-    }
+    } */
 
     .contact-inner {
         width: 100%;

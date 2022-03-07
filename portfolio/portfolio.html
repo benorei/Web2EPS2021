@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,27 +8,35 @@
     <title>Portfolio | Everest Oreizy</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fg.css">
-    
+
 </head>
+
 <body>
+    <div id="blur"></div>
     <div class="topnav fg"></div>
     <button id="hamburger" class="fg"><i class="bi bi-menu-app"></i></button>
-    <div class="page">
-        <h1 class="fg pad20 dt cp2">
+
+    <!-- Popout iframe -->
+    <iframe src="" frameborder="0" id="portfolio-popout"></iframe>
+    <button id="portfolio-pop-close" class="fg" onclick="endpop()"><i class="bi bi-x"></i></button>
+
+    <!-- main page -->
+    <div class="page mwn">
+        <!-- Everything is filled in by JavaScript! -->
+        <h1 class="fg pad20 dt cp3">
             Web Portfolio
         </h1>
-        <div class="fg cp2 pad20 w100 porfolio">
-            <div class="fg pad10">
-                item
-            </div>
-            <div class="fg pad10">
-                item
-            </div>
+        <div class="w100 portfolio" id="portfolio">
         </div>
+
+        <div class="fg cp3 pad10" id="lastupdated"></div>
 
     </div>
 
     <div class="footer fg"></div>
 </body>
 <script src="js/nav.js"></script>
+<script src="js/projects.js"></script>
+<script src="js/portfolio.js"></script>
+
 </html>

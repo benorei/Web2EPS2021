@@ -586,6 +586,10 @@ a.inh {
 
 }
 
+.portfolio .portfolio-item .portfolio-description.hbox {
+    justify-content: space-between;
+}
+
 .portfolio .portfolio-item:hover {
     scale: 1.05;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, .25);

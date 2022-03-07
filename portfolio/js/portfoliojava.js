@@ -10,7 +10,6 @@ let optfilteryr = document.getElementById("filteryr");
 let optfiltertype = document.getElementById("filtertype");
 
 let page = window.location.pathname.split("/").pop();
-console.log(page);
 
 lastupdated.innerText = "Last updated: " + projects.lastupdated;
 
@@ -32,9 +31,7 @@ function sortnfilter() {
     let filteryr = optfilteryr.value;
     let filtertype = optfiltertype.value;
 
-    console.log("filteryr: " + filteryr + " , item.year: ");
-
-    console.log(n);
+    // console.log("filteryr: " + filteryr + " , item.year: ");
 
     if (filteryr != "all") {
         n = n.filter(function (item) {
@@ -48,7 +45,7 @@ function sortnfilter() {
         });
     }
 
-    console.log(n);
+    // console.log(n);
 
     //Sort (has to go after filtering)
     if (optsort.value == "year") {

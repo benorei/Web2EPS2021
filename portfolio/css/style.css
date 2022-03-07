@@ -588,6 +588,15 @@ a.inh {
 
 }
 
+.portfolio-filter-container {
+    align-items: center;
+    gap: 20px;
+}
+
+.portfolio-filter-notice {
+    height: 100%;
+}
+
 .portfolio .portfolio-item .portfolio-description.hbox {
     justify-content: space-between;
 }

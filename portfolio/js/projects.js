@@ -129,6 +129,82 @@ let projects = {
         }
     ],
     "java": [
-
+        {
+            name: "Bubblesort",
+            type: "classwork",
+            url: "java/bubblesort.zip",
+            description: "Bubble sort algorithm for Java",
+            year: 2019
+        },
+        {
+            name: "Beowulf Word Count",
+            type: "classwork",
+            url: "java/Beowulf.zip",
+            description: "Analyzing the text for common words",
+            year: 2019
+        },
+        {
+            name: "Object Oriented Programming Practice",
+            type: "classwork",
+            url: "java/objects.zip",
+            description: "Practice classwork",
+            year: 2019
+        },
+        {
+            name: "JavaFX Practice",
+            type: "classwork",
+            url: "java/JavaFX1.zip",
+            description: "Practice classwork",
+            year: 2019
+        },
+        {
+            name: "Food",
+            type: "classwork",
+            url: "java/CW_Food.zip",
+            description: "More Object-Oriented Programming practice",
+            year: 2019
+        },
+        {
+            name: "Hello, World!",
+            type: "homework",
+            url: "java/MyHelloWorldEO.zip",
+            description: "A simple program.",
+            year: 2019
+        },
+        {
+            name: "Calculating Pi",
+            type: "homework",
+            url: "java/HW_CalculatingPi.zip",
+            description: "Pi, as many decimal places as you want",
+            year: 2019
+        },
+        {
+            name: "Star Wars Name Generator",
+            type: "homework",
+            url: "java/HW_StarWarsNameGenerator.zip",
+            description: "Generate a random Star Wars sounding name",
+            year: 2019
+        },
+        {
+            name: "Extra Credit",
+            type: "homework",
+            url: "java/HW_ArrayPractice.zip",
+            description: "Practice with arrays for extra credit",
+            year: 2019
+        },
+        {
+            name: "Locations",
+            type: "homework",
+            url: "java/HW_oop.zip",
+            description: "Practice with object-oriented programming",
+            year: 2019
+        },
+        {
+            name: "Text Analyzer UI",
+            type: "homework",
+            url: "java/AnalysisEO.zip",
+            description: "Analyze a .txt file! GUI included",
+            year: 2020
+        }
     ]
 }

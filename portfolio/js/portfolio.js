@@ -11,13 +11,6 @@ let optfilterloc = document.getElementById("filterloc");
 let page = window.location.pathname.split("/").pop();
 console.log(page);
 
-let data = null;
-if(page == "portfolio.html"){
-    data = projects.web;
-} else if (page == "portfoliojava.html") {
-    data = projects.java;
-}
-
 lastupdated.innerText = "Last updated: " + projects.lastupdated;
 
 // the data variable is set on the HTML page. This is because this JS file is used twice, for portfolio.html and portfoliojava.html.
@@ -34,7 +27,7 @@ sortnfilter();
 
 //filter and sort in one
 function sortnfilter() {
-    let n = data;
+    let n = projects.web;
 
     //Filter
     let filteryr = optfilteryr.value;

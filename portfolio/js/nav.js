@@ -3,7 +3,7 @@ let nav_cont = `
 <a href="about.html">About</a>
 <a href="portfolio.html">Web Portfolio</a>
 <a href="pricing.html">Pricing</a>
-<a href="#">Java Portfolio</a>
+<a href="portfoliojava.html">Java Portfolio</a>
 <a href="contact.html">Contact</a>
 `
 
@@ -18,7 +18,7 @@ let footer_cont = `
     About</a>
     <a href="portfolio.html" class="fg btna pad10 dt center smi-l hvr-underline whi">Web Portfolio</a>
     <a href="pricing.html" class="fg btna pad10 dt center smi-l hvr-underline whi">Pricing</a>
-    <a href="#" class="fg btna pad10 dt center smi-l hvr-underline whi">Java Portfolio</a>
+    <a href="portfoliojava.html" class="fg btna pad10 dt center smi-l hvr-underline whi">Java Portfolio</a>
     <a href="contact.html" class="fg btna pad10 dt center smi-l hvr-underline whi">Contact</a>
 
 `

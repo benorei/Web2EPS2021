@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Portfolio | Everest Oreizy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fg.css">
+
+</head>
+
+<body>
+    <div id="blur"></div>
+    <div class="topnav fg"></div>
+    <button id="hamburger" class="fg"><i class="bi bi-menu-app"></i></button>
+
+    <!-- Popout iframe -->
+    <iframe src="" frameborder="0" id="portfolio-popout"></iframe>
+    <button id="portfolio-pop-close" class="fg" onclick="endpop()"><i class="bi bi-x"></i></button>
+
+    <!-- main page -->
+    <div class="page mwn">
+        <!-- Everything is filled in by JavaScript! -->
+        <h1 class="fg pad20 dt cp3">
+            Java Portfolio
+        </h1>
+        <div class="hbox">
+            <div class="fg cp3 pad10" id="sortcontainer">
+                Sort by: <select id="sortby">
+                    <option value="year">Year (ascending)</option>
+                    <option value="yeardesc" selected="selected">Year (descending)</option>
+                    <option value="title">Title A-Z</option>
+                    <option value="type">Project type</option>
+                </select>
+            </div>
+            <div class="fg cp3 pad10" id="filtercontainer">
+                Filter by...
+                Year: <select id="filteryr">
+                    <option value="all">None</option>>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                </select>
+                Type: <select id="filtertype">
+                    <option value="all">None</option>
+                    <option value="classwork">Programming 2 classwork</option>
+                    <option value="homework">Programming 2 homework</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="w100 portfolio" id="portfolio">
+        </div>
+
+        <div class="fg cp3 pad10" id="lastupdated"></div>
+
+    </div>
+
+    <div class="footer fg"></div>
+</body>
+<script src="js/nav.js"></script>
+<script src="js/projects.js"></script>
+<script src="js/portfoliojava.js"></script>
+</html>

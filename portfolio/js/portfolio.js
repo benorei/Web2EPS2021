@@ -16,6 +16,7 @@ web.forEach(item => {
     el.classList.add("fg");
     el.classList.add("portfolio-item");
     el.classList.add("cp3");
+    el.classList.add("dt");
 
     //heading
     let header = document.createElement("h3");
@@ -36,12 +37,6 @@ web.forEach(item => {
     description.appendChild(blurb);
     description.appendChild(type_yr);
 
-    // description.innerText = item.type + " ● " + item.description + " ● " + item.year;
-
-    //year
-    let year = document.createElement("p");
-    year.classList.add("portfolio-year");
-    year.innerText = item.year;
 
     //image
     let image = document.createElement("img");

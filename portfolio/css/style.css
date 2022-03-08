@@ -823,6 +823,11 @@ a.inh {
     color: black;
 }
 
+
+.contact button {
+    font-family: 'Fredoka', sans-serif;
+}
+
 /* Light mode vs dark mode. instead of setting colors and then overriding with dark mode (which css sometimes doesn't like) I define colors for both light and dark. */
 @media (prefers-color-scheme: light) {
     .topnav a:hover {

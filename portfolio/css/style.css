@@ -90,6 +90,16 @@ a {
     text-align: center;
 }
 
+a.buttonlike {
+    transition-property: scale, background-color, box-shadow;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+a.buttonlike:hover {
+    scale: 1.1 !important;
+}
+
 /* only hover underlines on the page, not on navbar */
 .page a:hover {
     text-decoration: underline double;
@@ -373,6 +383,12 @@ h1.main-header{
 .featured-project div {
     display: flex;
     flex-direction: column;
+}
+
+.featured-project a{
+    transition-property: background-color, box-shadow, scale;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
 }
 
 /* FOOTER SOCIAL MEDIA LINKS */

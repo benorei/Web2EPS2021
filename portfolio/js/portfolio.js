@@ -60,16 +60,16 @@ function sortnfilter() {
 
     //Sort (has to go after filtering)
     if (optsort.value == "year") {
-        n=n.sort(sortyr);
+        n = n.sort(sortyr);
     }
     if (optsort.value == "yeardesc") {
-        n=n.sort(sortyr).reverse();
+        n = n.sort(sortyr).reverse();
     }
     else if (optsort.value == "title") {
-        n=n.sort(sortname);
+        n = n.sort(sortname);
     }
     else if (optsort.value == "type") {
-        n=n.sort(sorttype);
+        n = n.sort(sorttype);
     }
 
     //Repopulate (will retrigger .fg animation)
@@ -188,11 +188,13 @@ function pop(item) {
 
 function endpop() {
     popsurface.classList.remove("displayed");
-    popsurface.src = "empty.html";
     closebtn.classList.remove("displayed");
     document.body.style.overflow = "auto";
     // popsurface.style.display = "none";
-    setTimeout(() => popsurface.style.display = "none", 600);
+    setTimeout(() => {
+        popsurface.style.display = "none";
+        popsurface.src = "empty.html";
+    }, 600);
 }
 
 // if the page url has a redirect from a featured project, pop it out
@@ -204,6 +206,6 @@ console.log("query: " + query);
 featured_item = projects.web.find(function (item) { //finds the item with id of that
     return item.id == query;
 });
-if(featured_item){ //pop it out if that item exists (if it doesn't ie there isn't one, it does nothing)
+if (featured_item) { //pop it out if that item exists (if it doesn't ie there isn't one, it does nothing)
     pop(featured_item);
 }

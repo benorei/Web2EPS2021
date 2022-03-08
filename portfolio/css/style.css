@@ -836,7 +836,7 @@ a.inh {
         box-shadow: 0 0 20px 0 rgba(0, 0, 0, .25);
     }
 
-    .topnav a:hover::before {
+    /* .topnav a:hover::before {
         content: "";
         position: absolute;
         background: inherit;
@@ -848,7 +848,7 @@ a.inh {
         box-shadow: inset 0 0 10px rgba(255, 255, 255, .5);
 
         filter: blur(5px);
-    }
+    } */
 
     .hvr:hover {
         box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 30px;

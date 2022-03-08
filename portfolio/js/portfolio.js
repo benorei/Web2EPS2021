@@ -99,7 +99,7 @@ function populate(data) {
         el.classList.add("dt");
 
         //heading
-        let header = document.createElement("h3");
+        let header = document.createElement("h2");
         header.innerText = item.name;
 
         //description
@@ -130,7 +130,7 @@ function populate(data) {
 
         //add onclick to div
         el.onclick = function () {
-            pop(el, item);
+            pop(item);
         }
 
         //add the div to the portfolio
@@ -169,10 +169,8 @@ function sorttype(one, two) {
     }
 }
 
-let elrect = null;
-
 //toggle large view
-function pop(element, item) {
+function pop(item) {
     console.log("popping: " + item.url);
 
     popsurface.style.display = "block";
@@ -196,3 +194,15 @@ function endpop() {
     setTimeout(() => popsurface.style.display = "none", 600);
 }
 
+// if the page url has a redirect from a featured project, pop it out
+// https://www.delftstack.com/howto/javascript/check-if-string-is-number-javascript/
+// there's probably a better way to do this if had thought of this feature previously but i dont have enough time before this ships to redesign everything.
+// This won't throw errors when there isn't a #.
+var query = window.location.href.split("#")[1]; // gets what's after the #
+console.log("query: " + query);
+featured_item = projects.web.find(function (item) { //finds the item with id of that
+    return item.id == query;
+});
+if(featured_item){ //pop it out if that item exists (if it doesn't ie there isn't one, it does nothing)
+    pop(featured_item);
+}

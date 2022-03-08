@@ -47,10 +47,9 @@ body {
     background: linear-gradient(-40deg, rgb(228, 171, 225) 0%, rgb(122, 118, 196) 50%, rgb(10, 168, 199) 100%);
 
     /* Position the background properly */
-    background-repeat: no-repeat;
+    background-repeat: no-repeat !important;
     background-size: cover;
     background-attachment: fixed;
-    background-repeat: no-repeat;
 
     background-position: center;
     justify-content: center;
@@ -175,7 +174,7 @@ h1.main-header{
     gap: 2%;
     margin: 20px;
     border-radius: 10px;
-    padding: 5px;
+    padding: 10px;
 
     /* Solidify on hover */
     transition-property: scale, box-shadow, background-color;
@@ -363,6 +362,19 @@ h1.main-header{
     color: white !important;
 }
 
+/* HOMEPAGE FEATURED PROJECT */
+.featured-project {
+    display: flex;
+    gap: 20px;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.featured-project div {
+    display: flex;
+    flex-direction: column;
+}
+
 /* FOOTER SOCIAL MEDIA LINKS */
 /* smi for social media icons, smi-l for bottom nav links */
 .smi {
@@ -547,10 +559,15 @@ a.inh {
     flex-direction: row;
     flex-wrap: wrap;
 
-    gap: 10px;
-
     width: 100%;
     justify-content: flex-start;
+
+    gap: 20px;
+}
+
+.contact-others div{
+    display: flex;
+    gap: 5px;
 }
 
 /* PORTFOLIO PAGE */
@@ -715,6 +732,18 @@ a.inh {
     display: block;
 }
 
+/* open in netbeans image */
+.netbeans {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    align-items: center;
+}
+
+.netbeans img {
+    max-height: 50px;
+}
+
 /* PRICING PAGE */
 .pricing {
     width: 80%;
@@ -760,12 +789,12 @@ a.inh {
 }
 
 .pricing .pricing-notice {
-    font-size: 15px;
+    font-size: 16px;
     color: rgb(53, 53, 53);
     text-align: center;
     background: inherit;
     flex-basis: 0;
-    overflow: visible !important;
+    padding: 5px;
 }
 
 .pbtn {
@@ -936,6 +965,11 @@ a.inh {
         color: white !important;
     }
 
+    .contact h2 {
+        text-align: center;
+        width: 100% !important;
+    }
+
     .pricing {
         color: white;
     }
@@ -1036,6 +1070,10 @@ a.inh {
 
     .portfolio-filter-container, #filtercontainer, #sortcontainer {
         flex-direction: column !important;
+    }
+
+    .page {
+        width: 80vw;
     }
 
 }

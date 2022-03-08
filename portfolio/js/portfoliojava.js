@@ -87,7 +87,7 @@ function populate(data) {
         el.classList.add("dt");
 
         //heading
-        let header = document.createElement("h3");
+        let header = document.createElement("h2");
         header.innerText = item.name;
 
         //description

@@ -1,5 +1,5 @@
 let projects = {
-    lastupdated: "4 March 2022",
+    lastupdated: "7 March 2022",
     web: [
         {
             name: "Arch Linux",
@@ -8,7 +8,8 @@ let projects = {
             description: "Homepage overhaul for Arch Linux",
             imageurl: "images/projclip/projclip5.png",
             year: "2022",
-            location: "internal"
+            location: "internal",
+            id: "arch_redesign"
         },
         {
             name: "My Pet's Vet Clinic Website",
@@ -16,8 +17,9 @@ let projects = {
             url: "https://eastsidepreparatoryschool.github.io/web2-group3/index.html",
             description: "6-page client-directed design",
             imageurl: "images/projclip/projclip11.png",
-            year: "2021",
-            location: "internal"
+            year: "2022",
+            location: "internal",
+            id: "mpvc"
         },
         {
             name: "Loading Your Experience",
@@ -25,8 +27,9 @@ let projects = {
             url: "../css_transition/index.html",
             description: "CSS transitions",
             imageurl: "images/projclip/projclip4.png",
-            year: "2022",
-            location: "internal"
+            year: "2021",
+            location: "internal",
+            id: "css_transition"
 
         },
         {
@@ -36,7 +39,8 @@ let projects = {
             description: "Aesthetic testing",
             imageurl: "images/projclip/projclip3.png",
             year: "2022",
-            location: "internal"
+            location: "internal",
+            id: "frostedglass_demo"
         },
         {
             name: "Void Robotics '21",
@@ -45,7 +49,8 @@ let projects = {
             description: "What if Void was a robotics vendor?",
             imageurl: "images/projclip/projclip10.png",
             year: "2021",
-            location: "internal"
+            location: "internal",
+            id: "voidrobotics"
         },
         {
             name: "KrugerSolutions.biz",
@@ -54,7 +59,8 @@ let projects = {
             description: "Physics study resource website",
             imageurl: "images/projclip/projclip9.png",
             year: "2021",
-            location: "external"
+            location: "external",
+            id: "krugersolutions"
         },
         {
             name: "All About Gradients",
@@ -63,7 +69,8 @@ let projects = {
             description: "CSS gradients tutorial",
             imageurl: "images/projclip/projclip2.png",
             year: "2022",
-            location: "internal"
+            location: "internal",
+            id: "gradients_demo"
         },
         {
             name: "NASA Welcome",
@@ -72,7 +79,8 @@ let projects = {
             description: "Winter-themed landing page",
             imageurl: "images/projclip/projclip8.png",
             year: "2021",
-            location: "internal"
+            location: "internal",
+            id: "themedpage"
         },
         {
             name: "Bestsite",
@@ -81,7 +89,8 @@ let projects = {
             description: "Global nav test",
             imageurl: "images/projclip/projclip7.png",
             year: "2021",
-            location: "internal"
+            location: "internal",
+            id: "nav_include_demo"
         },
         {
             name: "La bolsa nueva",
@@ -90,7 +99,8 @@ let projects = {
             description: "Responsive CSS design",
             imageurl: "images/projclip/projclip6.png",
             year: "2021",
-            location: "internal"
+            location: "internal",
+            id: "responsive_css"
         },
         // {
         //     name: "La bolsa nueva 2.0",
@@ -107,7 +117,8 @@ let projects = {
             description: "Rehearsal resource for singers",
             imageurl: "images/projclip/projclip13.png",
             year: "2017",
-            location: "external"
+            location: "external",
+            id: "odyssey"
         },
         // {
         //     name: "ROLLLINK",
@@ -120,11 +131,12 @@ let projects = {
         {
             name: "Personal Blog",
             type: "custom",
-            url: "https://www.blog.noallus.nl/",
+            url: "https://blog.noallus.nl/",
             description: "Based on Next.js",
             imageurl: "images/projclip/blog.noallus.nl.png",
             year: "2020",
-            location: "external"
+            location: "external",
+            id: "blog"
 
         }
     ],

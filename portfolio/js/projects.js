@@ -4,7 +4,7 @@ let projects = {
         {
             name: "Arch Linux",
             type: "redesign",
-            url: "../arch_redesign/index.html",
+            url: "https://everestoreizy.github.io/arch_redesign/index.html",
             description: "Homepage overhaul for Arch Linux",
             imageurl: "images/projclip/projclip5.png",
             year: "2022",
@@ -24,7 +24,7 @@ let projects = {
         {
             name: "Loading Your Experience",
             type: "bite",
-            url: "../css_transition/index.html",
+            url: "https://everestoreizy.github.io/css_transition/index.html",
             description: "CSS transitions",
             imageurl: "images/projclip/projclip4.png",
             year: "2021",
@@ -35,7 +35,7 @@ let projects = {
         {
             name: "Frosted Glass",
             type: "bite",
-            url: "../frostedglass_demo/index.html",
+            url: "https://everestoreizy.github.io/frostedglass_demo/index.html",
             description: "Aesthetic testing",
             imageurl: "images/projclip/projclip3.png",
             year: "2022",
@@ -45,7 +45,7 @@ let projects = {
         {
             name: "Void Robotics '21",
             type: "custom",
-            url: "../voidrobotics/index.html",
+            url: "https://everestoreizy.github.io/voidrobotics/index.html",
             description: "What if Void was a robotics vendor?",
             imageurl: "images/projclip/projclip10.png",
             year: "2021",
@@ -65,7 +65,7 @@ let projects = {
         {
             name: "All About Gradients",
             type: "demo",
-            url: "../gradients_demo/index.html",
+            url: "https://everestoreizy.github.io/gradients_demo/index.html",
             description: "CSS gradients tutorial",
             imageurl: "images/projclip/projclip2.png",
             year: "2022",
@@ -75,7 +75,7 @@ let projects = {
         {
             name: "NASA Welcome",
             type: "redesign",
-            url: "../themedpage/index.html",
+            url: "https://everestoreizy.github.io/themedpage/index.html",
             description: "Winter-themed landing page",
             imageurl: "images/projclip/projclip8.png",
             year: "2021",
@@ -85,7 +85,7 @@ let projects = {
         {
             name: "Bestsite",
             type: "bite",
-            url: "../nav_include_demo/index.html",
+            url: "https://everestoreizy.github.io/nav_include_demo/index.html",
             description: "Global nav test",
             imageurl: "images/projclip/projclip7.png",
             year: "2021",
@@ -95,7 +95,7 @@ let projects = {
         {
             name: "La bolsa nueva",
             type: "example",
-            url: "../responsive_css/index.html",
+            url: "https://everestoreizy.github.io/responsive_css/index.html",
             description: "Responsive CSS design",
             imageurl: "images/projclip/projclip6.png",
             year: "2021",
@@ -114,7 +114,7 @@ let projects = {
             name: "Odyssey Soundtrack Player",
             type: "custom",
             url: "https://morning-ridge-58923.herokuapp.com/",
-            description: "Rehearsal resource for singers",
+            description: "Rehearsal resource for singers. Slow to load.",
             imageurl: "images/projclip/projclip13.png",
             year: "2017",
             location: "external",

@@ -96,6 +96,10 @@ a.buttonlike {
     transition-timing-function: ease-in-out;
 }
 
+input, textarea {
+    font-family: 'Fredoka', sans-serif;
+}
+
 a.buttonlike:hover {
     scale: 1.1 !important;
 }

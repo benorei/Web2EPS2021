@@ -1,10 +1,10 @@
 let nav_cont = `
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="portfolio.html">Web Portfolio</a>
-<a href="pricing.html">Pricing</a>
-<a href="portfoliojava.html">Java Portfolio</a>
-<a href="contact.html">Contact</a>
+<a href="index.html">HOME</a>
+<a href="about.html">ABOUT</a>
+<a href="pricing.html">PRICING</a>
+<a href="portfolio.html">WEB PORTFOLIO</a>
+<a href="portfoliojava.html">JAVA PORTFOLIO</a>
+<a href="contact.html">CONTACT</a>
 `
 
 //footer icons using fontawesome.com

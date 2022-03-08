@@ -1,7 +1,11 @@
+/* Welcome to my CSS file! Enjoy your stay <3 */
+
+/* Icons & Fonts import */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
 
+/* Define color palette */
 :root {
     --cp1: #5647873a;
     --cp2: #dbcbd83a;
@@ -23,56 +27,62 @@
     --cpf5: #101935;
 
     --cpd: rgba(0, 0, 0, 0.65);
+    --cpfd: rgba(0, 0, 0, 1);
 }
 
+/* GLOBALS */
+/* Headings (I used to use a different font for headings) */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Righteous';
+    font-family: 'Fredoka', sans-serif; /* previously Righteous */
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 body {
     /* Remove white border */
     margin: 0px;
+
+    /* Gradient */
     background: linear-gradient(-40deg, rgb(228, 171, 225) 0%, rgb(122, 118, 196) 50%, rgb(10, 168, 199) 100%);
 
+    /* Position the background properly */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 
-    background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
     justify-content: center;
-
-    background-attachment: fixed;
 
     font-family: 'Fredoka', Verdana, Geneva, Tahoma, sans-serif;
 }
 
-h1 {
-    /* animation-name: bump-in; */
-    animation-duration: 0.1s;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-timing-function: linear;
+/* Divs usually have their own padding */
+p {
+    padding: 0px;
+}
 
+/* large font */
+.flg {
+    font-size: 1.3em;
+}
+
+h1 {
     text-align: center;
     font-size: 40px;
-    /* margin-top: 100px; */
     background-color: white;
-
     margin: 0px;
 }
 
 .page {
+    /* i love flexbox */
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
-
-    /* max-width: 80%; */
-    max-width: calc(100% - 40px);
-    margin: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 1440px;
 }
 
 a {
@@ -80,6 +90,7 @@ a {
     text-align: center;
 }
 
+/* only hover underlines on the page, not on navbar */
 .page a:hover {
     text-decoration: underline double;
 }
@@ -87,11 +98,9 @@ a {
 a.raised {
     padding: 10px;
     border-radius: 10px;
-
 }
 
-
-
+/* color pallete classes for designing within html */
 .cp1 {
     background-color: var(--cp1);
     color: white;
@@ -136,28 +145,6 @@ a.raised {
     color: white;
 }
 
-/* a.b.cp1 {
-    background-color: var(--cpf1);
-    color: white;
-}
-
-a.b.cp2 {
-    background-color: var(--cpf2);
-}
-
-a.b.cp3 {
-    background-color: var(--cpf3);
-}
-
-a.b.cp4 {
-    background-color: var(--cpf4);
-}
-
-a.b.cp5 {
-    background-color: var(--cpf5);
-    color: white;
-} */
-
 a.cpm1 {
     transition: background-color 0.3s;
 }
@@ -166,6 +153,7 @@ a.cpm1:hover {
     background-color: var(--cpf1);
 }
 
+/* NAVBAR */
 .topnav {
     overflow: hidden;
     display: flex;
@@ -175,16 +163,8 @@ a.cpm1:hover {
     border-radius: 10px;
     padding: 5px;
 
-    flex-wrap: wrap;
-
-    /* position: sticky !important; */
-    /* width: 100%; */
-    /* z-index: 3 !important; */
-    /* top: 20px; */
-
-    background-color: var(--cp3);
-
-    transition-property: scale box-shadow background-color;
+    /* Solidify on hover */
+    transition-property: scale, box-shadow, background-color;
     transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
 }
@@ -192,40 +172,39 @@ a.cpm1:hover {
 .topnav::before {
     content: "";
     position: absolute;
-    /* background: inherit; */
     z-index: 1;
     top: 0px;
     left: 0px;
     right: 0px;
-    bottom: 0px;
-
-    background-color: red;
+    bottom: 0px; 
 }
 
+/* Solidify on hover */
 .topnav:hover {
-    /* animation: topnav-hover 0.2s linear 0s 1 forwards normal; */
     box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 30px !important;
-    /* scale: 1.05; */
 }
 
+/* Nav buttons */
 .topnav a {
     color: var(--cpf5);
     padding: 10px 30px;
 
-    border-radius: 5px;
+    border-radius: 10px;
 
     font-family: 'Fredoka', sans-serif !important;
 
-    flex-grow: 1;
-
-    transition: box-shadow 0.3s, background-color 0.3s, color 0.3s, scale 0.3s;
+    transition-property: box-shadow, background-color, color, scale;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
 
 }
 
+/* Grow slightly on hover (for some reason it needs !important, idk why) */
 .topnav a:hover {
-    /* scale: 1.1 !important; */
+    scale: 1.1 !important;
 }
 
+/* Hamburger menu (only shown on mobile) */
 #hamburger {
     display: none;
     position: fixed;
@@ -238,31 +217,28 @@ a.cpm1:hover {
     width: 60px;
     height: 60px;
     font-size: 30px;
-
-    background-color: var(--cpm5);
 }
 
+/* Hamburger icon */
 #hamburger i {
     position: absolute;
     top: 25%;
     left: 25%;
 }
 
+/* FOOTER */
 .footer {
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-content: center;
-    gap: 10px;
+    column-gap: 10px;
+    row-gap: 20px;
     margin: 20px;
     padding: 30px;
 
     flex-wrap: wrap;
-    /* z-index: 3 !important; */
-    /* top: 20px; */
-
     min-height: 60px;
-
     background-color: var(--cp3);
 }
 
@@ -270,10 +246,12 @@ a.cpm1:hover {
     color: black;
 }
 
+/* Not covered by page-only underline */
 .footer a:hover {
     text-decoration: underline double;
 }
 
+/* STRUCTURES */
 .hbox {
     display: flex;
     flex-direction: row;
@@ -304,19 +282,23 @@ a.cpm1:hover {
     text-align: center;
 }
 
+/* Hover effect as a class on its own */
 .hvr {
-    transition: box-shadow 0.2s, scale 0.2s, transform 0.2s;
     /* z-index: 2; */
+    transition-property: box-shadow, scale;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
 }
 
 .hvr:hover {
-    transform: scale(1.1);
+    scale: 1.1;
 }
 
 .hvr-underline:hover {
     text-decoration: underline double;
 }
 
+/* Options for use in html. Nice for coding quickly. I really don't like inline CSS.*/
 .w30 {
     width: 30%;
 }
@@ -337,6 +319,7 @@ a.cpm1:hover {
     width: 100%;
 }
 
+/* Padding options */
 .fg.pad30 {
     /* margin: auto; */
     padding: 30px;
@@ -352,14 +335,18 @@ a.cpm1:hover {
     padding: 10px;
 }
 
+/* Font size option */
 .f12 {
     font-size: 1.2rem;
 }
 
+/* Color option */
 .whi {
     color: white !important;
 }
 
+/* FOOTER SOCIAL MEDIA LINKS */
+/* smi for social media icons, smi-l for bottom nav links */
 .smi {
     padding: 5px;
     width: 20px;
@@ -369,30 +356,20 @@ a.cpm1:hover {
 
 .smi-l {
     background-color: var(--cp5);
-    /* color: black !important; */
     transition: box-shadow 0.3s, background-color 0.3s, scale 0.3s;
 }
 
 .smi:hover {
-    /* background-color: var(--cpf2); */
-    /* animation: smi-raise 0.2s linear 0s 1 forwards normal; */
     box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 50px;
     background-color: var(--cpf2);
     scale: 1.1;
 }
 
 .smi-l:hover {
-    /* background-color: var(--cpf5); */
-    /* animation: smi-l-raise 0.2s linear 0s 1 forwards normal; */
     box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px;
     background-color: var(--cpf5);
     scale: 1.1;
 }
-
-/* 
-.smi:hover, .smi-l:hover {
-    animation: hover-raise 0.2s linear 0s 1 forwards normal;
-} */
 
 .footer span {
     height: fit-content;
@@ -400,6 +377,7 @@ a.cpm1:hover {
     text-align: center;
     margin-bottom: 5px;
 }
+
 
 .bi-menu-app {
     color: white;
@@ -434,7 +412,11 @@ a.inh {
 
     gap: 20px;
 
+    background: inherit;
+
     max-width: 1000px;
+
+    border-radius: 40px !important;
 }
 
 .contact div {
@@ -500,11 +482,12 @@ a.inh {
 .contact-radio div {
     /* width: 50%; */
     min-width: 34%;
+    border-radius: 10px;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .contact-radio div:hover {
     background-color: var(--cp1);
-    border-radius: 10px;
 }
 
 .contact-radio input {
@@ -578,9 +561,7 @@ a.inh {
 
     padding: 10px;
 
-    border-bottom: 1px solid var(--cpf5);
-
-    transition-property: border scale background-color;
+    transition-property: border, scale, background-color;
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
 
@@ -589,12 +570,20 @@ a.inh {
 }
 
 .portfolio-filter-container {
-    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
-.portfolio-filter-notice {
-    height: 100%;
+.portfolio-filter-container .fg{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 10px;
 }
 
 .portfolio .portfolio-item .portfolio-description.hbox {
@@ -605,8 +594,6 @@ a.inh {
     scale: 1.05;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, .25);
     background-color: var(--cpm3);
-
-    border-bottom-width: 5px;
 }
 
 .portfolio h3 {
@@ -711,25 +698,19 @@ a.inh {
     right: 30px;
     z-index: 5;
 
-    background-color: var(--cpm5);
-
     padding: 5px;
     width: 50px;
     height: 50px;
 
-    transition-property: scale background-color;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out;
+    transition: scale 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 #portfolio-pop-close:hover {
     scale: 1.1;
-    background-color: var(--cpf5);
 }
 
 #portfolio-pop-close .bi-x {
     margin: auto;
-    color: white;
     font-size: 30px;
 }
 
@@ -737,7 +718,64 @@ a.inh {
     display: block;
 }
 
+/* Pricing */
+.pricing {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+    align-items: stretch;
+    border-radius: 20px !important;
+}
 
+.pricing-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 20px;
+    gap: 5px;
+    align-items: stretch;
+}
+
+.pricing .pricing-title {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.pricing .pricing-sub {
+    flex-grow: 1;
+    text-align: center;
+    background-color: var(--cpm5);
+    color: white;
+    padding: 5px;
+    flex-basis: 0;
+}
+
+.pricing .pricing-item {
+    flex-grow: 1;
+    text-align: center;
+    background-color: var(--cp2);
+    /* padding: 5px; */
+    flex-basis: 0;
+}
+
+.pricing .pricing-notice {
+    font-size: 15px;
+    color: rgb(53, 53, 53);
+    /* flex-grow: 1; */
+    text-align: center;
+    background: inherit;
+    flex-basis: 0;
+    overflow: visible !important;
+}
+
+.pbtn {
+    font-weight: 600;
+}
 
 @media (prefers-color-scheme: light) {
     .topnav a:hover {
@@ -749,15 +787,43 @@ a.inh {
         /* transition: box-shadow 0.3s, background-color 0.3s, color 0.3s; */
     }
 
+    .topnav a:hover::before {
+        content: "";
+        position: absolute;
+        background: inherit;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: inset 0 0 10px rgba(255, 255, 255, .5);
+
+        filter: blur(5px);
+    }
+
     .hvr:hover {
         /* animation: hover-raise 0.2s linear 0s 1 forwards normal; */
         box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 30px;
-        scale: 1.1 !important;
+    }
 
+    .topnav {
+        background-color: var(--cp3);
     }
 
     .topnav:hover {
         background-color: var(--cpm3);
+    }
+
+    #hamburger, #portfolio-pop-close {
+        background-color: var(--cpm3);
+    }
+
+    #portfolio-pop-close:hover {
+        background-color: var(--cpf3);
+    }
+
+    #hamburger i, #portfolio-pop-close i {
+        color: black !important;
     }
 }
 
@@ -767,7 +833,6 @@ a.inh {
         /* animation: hover-raise-dark 0.2s linear 0s 1 forwards normal; */
         box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 30px;
         scale: 1.1 !important;
-
     }
 
     body {
@@ -778,13 +843,14 @@ a.inh {
 
     .topnav a {
         color: white;
+
     }
 
     .topnav a:hover {
         /* animation: topnav-link-hover-dark 0.2s linear 0s 1 forwards normal; */
-        background-color: var(--cpf4);
-        color: black;
-        box-shadow: #363639 0px 0px 50px;
+        background-color: var(--cp4);
+        color: white;
+        /* box-shadow: #363639 0px 0px 50px; */
         /* box-shadow: 0 0 20px 0 rgba(0, 0, 0, .25);
         transition: box-shadow 0.3s, background-color 0.3s, color 0.3s; */
     }
@@ -795,7 +861,7 @@ a.inh {
 
     .cp1.dt {
         background-color: var(--cpd);
-        color: var(--cpf1);
+        /* color: var(--cpf1); */
     }
 
     .cp2.dt {
@@ -815,7 +881,7 @@ a.inh {
 
     .cp5.dt {
         background-color: var(--cpd);
-        color: var(--cpf5);
+        /* color: var(--cpf5); */
     }
 
     .dt.p {
@@ -851,9 +917,21 @@ a.inh {
     .portfolio .portfolio-item:hover {
         background-color: var(--cpd);
     }
+
+    #hamburger, #portfolio-pop-close {
+        background-color: var(--cpd);
+    }
+
+    #portfolio-pop-close#hover {
+        background-color: var(--cpd);
+    }
+
+    #hamburger i, #portfolio-pop-close i {
+        color: white;
+    }
 }
 
-@media only screen and (max-width: 925px) {
+@media only screen and (max-width: 1000px) {
 
     /* ROW -> COL */
     .hbox {
@@ -873,32 +951,42 @@ a.inh {
         /* float: right; */
         right: 80px;
 
-        z-index: 9;
+        z-index: 9 !important;
         backdrop-filter: blur(10px);
-
-        background-color: var(--cpm5);
 
         position: fixed !important;
 
-        /* animation: nav-enter 0.2s ease-out 0s 1 forwards normal; */
+        transition: transform 0.3s, background-color 0.3s;
 
-        transition: transform 0.3s;
+        transform: translate(0px, -110%);
+        /* transform: translate(0px, 0px); */
 
-        transform: translate(0px, calc(-200%));
+        row-gap: 5px;
+
+        animation: none !important;
 
     }
 
     .topnav a {
-        color: white !important;
-        z-index: 10;
+        /* color: white !important; */
+        z-index: 10 !important;
+    }
+
+    .topnav a:hover {
+        scale: 1 !important;
     }
 
     #hamburger {
         display: block;
     }
 
+    #portfolio-pop-close {
+        top: 100px;
+    }
+
     .hamburg-show {
         transform: translate(0px, 0px);
+        /* transform: translate(0px, -200%); */
     }
 
     /* WIDEN */
@@ -914,9 +1002,9 @@ a.inh {
         width: 100%;
     }
 
-    /* h1 {
+    h1 {
         margin-top: 20px;
-    } */
+    }
 
     .contact-inner {
         width: 100%;
@@ -925,13 +1013,28 @@ a.inh {
     input {
         color: white;
     }
+
 }
 
-@media only screen and (max-width: 925px) and (prefers-dark-color-scheme: dark) {
+@media only screen and (max-width: 1000px) and (prefers-color-scheme: light) {
     .topnav {
-        background-color: var(--cpd);
+        background-color: var(--cpf3) !important;
+    }
+
+    #hamburger, #portfolio-pop-close {
+        background-color: var(--cpf3) !important;
+    }
+}
+
+@media only screen and (max-width: 1000px) and (prefers-color-scheme: dark) {
+    .topnav {
+        background-color: var(--cpfd) !important;
         color: white;
 
-        z-index: 9;
+        /* z-index: 9; */
+    }
+
+    #hamburger, #portfolio-pop-close {
+        background-color: var(--cpfd) !important;
     }
 }

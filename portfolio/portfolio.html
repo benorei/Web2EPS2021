@@ -26,18 +26,18 @@
         <h1 class="fg pad20 dt cp3">
             Web Portfolio
         </h1>
-        <div class="hbox">
-            <div class="fg cp3 pad10" id="sortcontainer">
-                Sort by: <select id="sortby">
+        <div class="portfolio-filter-container">
+            <div class="dt fg cp3 pad10" id="sortcontainer">
+                <span>Sort by...</span><select id="sortby">
                     <option value="year">Year (ascending)</option>
                     <option value="yeardesc" selected="selected">Year (descending)</option>
                     <option value="title">Title A-Z</option>
                     <option value="type">Project type</option>
                 </select>
             </div>
-            <div class="fg cp3 pad10" id="filtercontainer">
-                Filter by...
-                Year: <select id="filteryr">
+            <div class="dt fg cp3 pad10" id="filtercontainer">
+                <span>Filter by...</span>
+                <span>Year:</span> <select id="filteryr">
                     <option value="all">None</option>
                     <option value="2022">2022</option>
                     <option value="2021">2021</option>
@@ -46,7 +46,7 @@
                     <option value="2018">2018</option>
                     <option value="2017">2017</option>
                 </select>
-                Type: <select id="filtertype">
+                <span>Type:</span> <select id="filtertype">
                     <option value="all">None</option>
                     <option value="custom">Custom website</option>
                     <option value="example">Example website</option>
@@ -54,11 +54,14 @@
                     <option value="redesign">Redesign</option>
                     <option value="demo">Demo/tutorial</option>
                 </select>
-                Location: <select id="filterloc">
+                <span>Location:</span> <select id="filterloc">
                     <option value="all">None</option>
                     <option value="internal">Internal</option>
                     <option value="external">External</option>
                 </select>
+            </div>
+            <div class="dt fg cp3 pad10" id="portfolio-filter-notice">
+                Click on a project to view a live demo in a popout window.
             </div>
         </div>
 

@@ -8,9 +8,9 @@ let nav_items_object = document.getElementsByClassName("opt");
 // Navbar html
 let nav = `
 <span class="title">Void Robotics</span>
-<a class="sub opt" href=".">Home</a>
-<a class="sub opt" href="products">Products</a>
-<a class="sub opt" href="contact">Contact</a>
+<a class="sub opt" href="index.html">Home</a>
+<a class="sub opt" href="products.html">Products</a>
+<a class="sub opt" href="contact.html">Contact</a>
 `
 
 // footer html

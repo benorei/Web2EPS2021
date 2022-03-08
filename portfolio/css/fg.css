@@ -1,9 +1,5 @@
 /* Frosted glass effect (copied from in-class demo project) */
-
-/* * {
-    box-sizing: border-box;
-} */
-
+/* Main frotsted glass effect */
 .fg {
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
     position: relative;
@@ -11,7 +7,6 @@
     overflow: hidden;
 
     border-radius: 10px;
-    height: fit-content;
 
     /* onload animation */
     animation-name: fg-onload;
@@ -20,8 +15,11 @@
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-timing-function: ease-in-out;
+
+    border-bottom: 0.5px solid var(--cpf5);
 }
 
+/* Frosted glass blurred shadow behind */
 .fg::before {
     content: "";
     position: absolute;
@@ -36,14 +34,7 @@
     filter: blur(5px);
 }
 
-.page a.fg {
-    box-shadow: 0 0 40px 0 rgba(0, 0, 0, .2);
-}
-
-.fg.blue {
-    background: var(--cp4);
-}
-
+/* Special rules for links and headers, because fg is usually used with other classes with their own padding */
 a.fg {
     padding: 10px;
 }
@@ -52,20 +43,34 @@ a.fg {
     margin-top: 0px;
 }
 
+.info.fg h2{
+    padding: 0px;
+    margin: 0px;
+}
+
+.info.fg p{
+    padding: 0px;
+}
+
+/* On page load "zoom" animation */
 @keyframes fg-onload {
     0% {
         opacity: 0;
         scale: 1.2;
         box-shadow: 0 0 50px 0 rgba(0, 0, 0, 1);
         filter: blur(2px);
+        /* transform: translate(0, 50px); */
+
     }
 
     100% {
         opacity: 1;
+        transform: translate(0,0);
         scale: 1;
     }
 }
 
+/* Only used for the portfolio pages but it's the exit animation for the popup */
 @keyframes fg-onexit {
     0% {
         opacity: 1;

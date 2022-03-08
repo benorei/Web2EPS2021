@@ -26,29 +26,29 @@
         <h1 class="fg pad20 dt cp3">
             Java Portfolio
         </h1>
-        <div class="hbox portfolio-filter-container">
-            <div class="fg cp3 pad10" id="sortcontainer">
-                Sort by: <select id="sortby">
+        <div class="portfolio-filter-container">
+            <div class="dt fg cp3 pad10" id="sortcontainer">
+                <span>Sort by...</span><select id="sortby">
                     <option value="year">Year (ascending)</option>
                     <option value="yeardesc" selected="selected">Year (descending)</option>
                     <option value="title">Title A-Z</option>
                     <option value="type">Project type</option>
                 </select>
             </div>
-            <div class="fg cp3 pad10" id="filtercontainer">
-                Filter by...
-                Year: <select id="filteryr">
+            <div class="dt fg cp3 pad10" id="filtercontainer">
+                <span>Filter by...</span>
+                <span>Year:</span><select id="filteryr">
                     <option value="all">None</option>>
                     <option value="2020">2020</option>
                     <option value="2019">2019</option>
                 </select>
-                Type: <select id="filtertype">
+                <span>Type:</span><select id="filtertype">
                     <option value="all">None</option>
                     <option value="classwork">Programming 2 classwork</option>
                     <option value="homework">Programming 2 homework</option>
                 </select>
             </div>
-            <div class="fg cp3 pad10 portfolio-filter-notice">
+            <div class="dt fg cp3 pad10 portfolio-filter-notice">
                 Click on a project to download it.
             </div>
         </div>

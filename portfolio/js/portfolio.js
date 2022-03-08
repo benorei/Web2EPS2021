@@ -188,6 +188,7 @@ function pop(item) {
 
 function endpop() {
     popsurface.classList.remove("displayed");
+    popsurface.src = "empty.html";
     closebtn.classList.remove("displayed");
     document.body.style.overflow = "auto";
     // popsurface.style.display = "none";

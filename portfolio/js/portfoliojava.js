@@ -2,8 +2,6 @@
 //most of this is copied from portfolio.js with a few modifications
 let portfolio = document.getElementById("portfolio");
 let lastupdated = document.getElementById("lastupdated");
-let popsurface = document.getElementById("portfolio-popout");
-let closebtn = document.getElementById("portfolio-pop-close");
 
 let optsort = document.getElementById("sortby");
 let optfilteryr = document.getElementById("filteryr");
@@ -20,7 +18,6 @@ notfoundmsg.classList.add("fg", "cp3", "pad10");
 notfoundmsg.innerText = "No results found.";
 
 //onload first time setup
-popsurface.style.display = "none";
 sortnfilter();
 
 //filter and sort in one

@@ -7,11 +7,11 @@
 
 /* Define color palette */
 :root {
-    --cp1: #5647873a;
-    --cp2: #dbcbd83a;
-    --cp3: #f2fdff3a;
-    --cp4: #9ad4d63a;
-    --cp5: #1019353a;
+    --cp1: #5647875f;
+    --cp2: #dbcbd85f;
+    --cp3: #f2fdff5f;
+    --cp4: #9ad4d65f;
+    --cp5: #1019355f;
 
     --cpm1: #56478780;
     --cpm2: #dbcbd880;
@@ -161,6 +161,28 @@ a.cpm1 {
 
 a.cpm1:hover {
     background-color: var(--cpf1);
+}
+
+.cpf1 {
+    background-color: var(--cpf1);
+    color: white;
+}
+
+.cpf2 {
+    background-color: var(--cpf2);
+}
+
+.cpf3 {
+    background-color: var(--cpf3);
+}
+
+.cpf4 {
+    background-color: var(--cpf4);
+}
+
+.cpf5 {
+    background-color: var(--cpf5);
+    color: white;
 }
 
 /* header on the homepage */
@@ -767,9 +789,9 @@ a.inh {
     flex-direction: column;
     gap: 5px;
     padding: 20px;
+    border-radius: 30px !important;
     box-sizing: border-box;
     align-items: stretch;
-    border-radius: 20px !important;
 }
 
 .pricing-row {
@@ -1108,7 +1130,7 @@ a.inh {
     }
 
     .page {
-        width: 80vw;
+        width: calc(100% - 80px);
     }
 
 }

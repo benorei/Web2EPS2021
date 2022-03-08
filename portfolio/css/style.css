@@ -8,20 +8,20 @@
 /* Define color palette */
 :root {
     --cp1: #5647875f;
-    --cp2: #dbcbd85f;
+    --cp2: #dfabd65f;
     --cp3: #f2fdff5f;
     --cp4: #9ad4d65f;
     --cp5: #1019355f;
 
     --cpm1: #56478780;
-    --cpm2: #dbcbd880;
+    --cpm2: #dfabd680;
     --cpm3: #f2fdff80;
     --cpm4: #9ad4d680;
     --cpm5: #10193580;
 
 
     --cpf1: #564787;
-    --cpf2: #dbcbd8;
+    --cpf2: #dfabd6;
     --cpf3: #f2fdff;
     --cpf4: #9ad4d6;
     --cpf5: #101935;

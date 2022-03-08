@@ -1014,6 +1014,14 @@ a.inh {
 /* MOBILE MODE */
 @media only screen and (max-width: 850px) {
 
+    .featured-project {
+        flex-direction: column;
+    }
+
+    .featured-project img {
+        width: 100%;
+    }
+
     /* ROWS -> COLS */
     .hbox {
         flex-direction: column;

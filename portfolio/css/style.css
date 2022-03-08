@@ -797,8 +797,14 @@ a.inh {
     padding: 5px;
 }
 
+.pricing a {
+    padding: unset !important;
+    color: black;
+}
+
 .pbtn {
     font-weight: 600;
+    color: black;
 }
 
 /* Light mode vs dark mode. instead of setting colors and then overriding with dark mode (which css sometimes doesn't like) I define colors for both light and dark. */

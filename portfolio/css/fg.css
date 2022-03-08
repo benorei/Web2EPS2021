@@ -57,8 +57,9 @@ a.fg {
     0% {
         opacity: 0;
         scale: 1.2;
-        box-shadow: 0 0 50px 0 rgba(0, 0, 0, 1);
+        box-shadow: 0 0 100px 0 rgba(0, 0, 0, 0.5);
         filter: blur(2px);
+        background-color: transparent;
         /* transform: translate(0, 50px); */
 
     }
@@ -81,5 +82,20 @@ a.fg {
         scale: 0.8;
         box-shadow: 0 0 50px 0 rgba(0, 0, 0, 1);
         filter: blur(2px);
+    }
+}
+
+@keyframes header-onload {
+    0% {
+        opacity: 0;
+        scale: 2;
+        text-shadow: 0 0 50px 0 rgba(0, 0, 0, 1);
+        filter: blur(2px);
+        transform: translate(0, 50px);
+    }
+    100%{
+        opacity: 1;
+        scale: 1;
+        transform: translate(0,0);
     }
 }

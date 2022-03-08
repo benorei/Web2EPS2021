@@ -38,40 +38,41 @@
             </div>
 
         </div>
-        <div class="fg dt pad30 w80 contact">
+        <form class="fg dt pad30 w80 contact" method="POST" action="https://getform.io/f/d4ea403a-e03c-4ab4-ad90-2a8d42ebc524">
             <h2>Contact form</h2>
             <!-- Contact info -->
+            
             <div class="contact-inner cp4 dt contact-name fg">
                 <h3>Name</h3>
-                <input type="text" class="fg">
+                <input type="text" name="name" class="fg">
             </div>
             <div class="contact-inner cp2 dt fg">
                 <h3>Email</h3>
-                <input type="email" class="fg">
+                <input type="email" name="email" class="fg">
             </div>
             <div class="contact-inner cp2 dt fg">
                 <h3>Phone</h3>
-                <input type="tel" class="fg">
+                <input type="tel" name="tel" class="fg">
             </div>
 
             <!-- Reason for contact -->
             <div class="contact-radio cp3 fg dt">
                 <h3>Purpose</h3>
                 <div>
-                    <input type="radio" name="contact" id="service-request">
+                    <input type="radio" name="contact" value="service-request" id="service-request">
                     <label for="service-request">Request web design services</label>
                 </div>
                 <div>
-                    <input type="radio" name="contact" id="chat">
+                    <input type="radio" name="contact" value="chat" id="chat">
                     <label for="chat">Let's chat</label>
                 </div>
 
                 <div>
-                    <input type="radio" name="contact" id="personal">
+                    <input type="radio" name="contact" value="personal" id="personal">
                     <label for="personal">I'm just interested in personal contact</label>
                 </div>
                 <div>
-                    <input type="radio" name="contact" id="employment-opportunity">
+                    <input type="radio" name="contact" value="employment-opportunity" id="employment-opportunity">
                     <label for="employment-opportunity">Employment opportunities</label>
                 </div>
 
@@ -80,10 +81,10 @@
             <!-- Message box -->
             <div class="contact-message cp4 dt fg">
                 <h3>Message</h3>
-                <textarea class="fg"></textarea>
+                <textarea name="message" class="fg"></textarea>
             </div>
             <button id="submit" class="fg dt contact-submit">Send</button>
-        </div>
+        </form>
 
 
     </div>
